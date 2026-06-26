@@ -572,7 +572,7 @@ body {
 
 /* Section Headers */
 .section {
-    padding: 9rem 0;
+    padding: 12rem 0;
 }
 
 .section-header {
@@ -609,32 +609,16 @@ body {
 
 .about-photo {
     width: 100%;
+    max-height: 360px;
+    object-fit: cover;
     border-radius: 24px;
     box-shadow: var(--shadow-soft);
 }
 
-.experience-badge {
-    position: absolute;
+.about-card {
     bottom: -20px;
     right: -20px;
-    background: var(--accent-gradient);
-    padding: 1.25rem 1.75rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-accent);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.experience-badge .years {
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.experience-badge .text {
-    font-size: 0.9rem;
-    font-weight: 500;
+    animation-delay: 0.5s;
 }
 
 .about-badge {
@@ -1432,7 +1416,7 @@ body {
     }
     
     .section {
-        padding: 7rem 0 5rem;
+        padding: 8rem 0 6rem;
     }
 
     .hero-title {
