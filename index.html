@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temban Blaise | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="Temban Blaise Logo" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#portfolio" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon moon-icon"></i>
+                <i class="fas fa-sun sun-icon"></i>
+            </button>
+            <a href="#contact" class="cta-btn">Let's Talk</a>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">
+                        <span>👋</span>
+                        <span>Available for hire</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Blaise</span>
+                        <br>
+                        <span class="gradient-text">Software Engineer</span>
+                    </h1>
+                    <p class="hero-desc">
+                        I build scalable, high-performance applications that solve real problems. 
+                        With 5+ years of experience, I turn ideas into reality.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="../cv_blaise_temban.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dev"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="glow-effect"></div>
+                        <img src="assets/images/profile.png" alt="Temban Blaise" class="profile-pic">
+                    </div>
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🟢</div>
+                        <div class="card-content">
+                            <div class="card-title">5+ Years</div>
+                            <div class="card-sub">Experience</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🚀</div>
+                        <div class="card-content">
+                            <div class="card-title">20+</div>
+                            <div class="card-sub">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Building Digital Experiences</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/images/profile.png" alt="Temban Blaise" class="about-photo">
+                    <div class="experience-badge">
+                        <span class="years">5+</span>
+                        <span class="text">Years of Experience</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-title">Passionate Developer Based in Cameroon</h3>
+                    <p class="about-paragraph">
+                        I'm a dedicated software engineer with a passion for creating clean, efficient, and user-friendly applications. 
+                        My expertise spans across full-stack development, with a strong focus on backend systems and modern web technologies.
+                    </p>
+                    <p class="about-paragraph">
+                        Over the years, I've had the opportunity to work on diverse projects from mobile apps to enterprise systems. 
+                        I believe in writing maintainable code and staying up-to-date with the latest industry trends.
+                    </p>
+                    <div class="skills-container">
+                        <h4 class="skills-title">Technologies I Work With</h4>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Python</div>
+                            <div class="skill-tag">JavaScript</div>
+                            <div class="skill-tag">React</div>
+                            <div class="skill-tag">Node.js</div>
+                            <div class="skill-tag">FastAPI</div>
+                            <div class="skill-tag">PostgreSQL</div>
+                            <div class="skill-tag">Odoo</div>
+                            <div class="skill-tag">AWS</div>
+                            <div class="skill-tag">Docker</div>
+                            <div class="skill-tag">Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-project="study-ai">
+                    <div class="portfolio-image">
+                        <img src="assets/images/study-ai/iPhone 16 - 24.png" alt="Study AI">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">AI Platform</span>
+                        <h3 class="portfolio-name">Study AI</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="nationwork">
+                    <div class="portfolio-image">
+                        <img src="assets/images/nationwork/Web Site Page Comp.png" alt="NationWork">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Web Platform</span>
+                        <h3 class="portfolio-name">NationWork</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="tameri">
+                    <div class="portfolio-image">
+                        <img src="assets/images/tameri-network/home.png" alt="Tameri Network">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Mobile Ecosystem</span>
+                        <h3 class="portfolio-name">Tameri Network</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="willonhair">
+                    <div class="portfolio-image">
+                        <img src="assets/images/willonhair/01- POS coiffeur - Commande à etat NOUVEAU.jpg" alt="WillOnHair">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Odoo ERP</span>
+                        <h3 class="portfolio-name">WillOnHair</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="hubkilo">
+                    <div class="portfolio-image">
+                        <img src="assets/images/hubkilo/1.jpg" alt="HubKilo">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Logistics ERP</span>
+                        <h3 class="portfolio-name">HubKilo</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="dga">
+                    <div class="portfolio-image">
+                        <img src="assets/images/dga/1.png" alt="DGA Express">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Web Portal</span>
+                        <h3 class="portfolio-name">DGA Express</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Ready to start your project?</h3>
+                    <p class="contact-desc">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:contact@temban.com">contact@temban.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <span>+237 6XX XXX XXX</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <span>Cameroon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Temban Blaise">
+                </div>
+                <p class="footer-text">© 2026 Temban Blaise. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <h2 id="modal-title" class="modal-title">Project Title</h2>
+                <div id="modal-tags" class="modal-tags"></div>
+                <p id="modal-desc" class="modal-description">Project description</p>
+                <div id="modal-gallery" class="modal-gallery"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
