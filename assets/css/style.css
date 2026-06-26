@@ -14,11 +14,11 @@
     --text-secondary: #4b5563;
     --text-muted: #6b7280;
     --accent-primary: #2563eb;
-    --accent-secondary: #1d4ed8;
+    --accent-secondary: #3b82f6;
     --accent-gradient: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
     --border-color: rgba(17, 24, 39, 0.12);
     --shadow-soft: 0 10px 30px rgba(17, 24, 39, 0.15);
-    --shadow-accent: 0 10px 30px rgba(37, 99, 235, 0.35);
+    --shadow-accent: 0 10px 30px rgba(37, 99, 235, 0.3);
 }
 
 [data-theme="dark"] {
@@ -325,8 +325,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.06) 0%, transparent 40%);
+    background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 40%);
     pointer-events: none;
 }
 
@@ -376,9 +376,9 @@ body {
 .hero-title {
     font-size: 4rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
-    min-height: 9rem;
+    min-height: 10rem;
 }
 .hero-title .typing-line:last-child {
     font-size: 2.5rem;
@@ -572,41 +572,34 @@ body {
 
 /* Section Headers */
 .section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4.5rem;
+    margin-bottom: 4rem;
 }
 
 .section-label {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent-primary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .section-title {
-    font-size: 3.5rem;
+    font-size: 3.25rem;
     font-weight: 800;
-    line-height: 1.15;
-}
-
-.about,
-.portfolio,
-.contact {
-    padding: 7rem 0;
 }
 
 /* About Section */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
 }
 
@@ -657,11 +650,11 @@ body {
     line-height: 1.8;
 }
 
-.skills-container {
-    margin-top: 2rem;
+.skills-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-top: 2rem;
 }
 
 .skills-title {
@@ -674,7 +667,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    align-content: flex-start;
 }
 
 .skill-tag {
@@ -803,7 +795,7 @@ body {
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .contact-title {
@@ -1391,18 +1383,9 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .skills-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .section-title {
-        font-size: 3rem;
-    }
-
-    .about,
-    .portfolio,
-    .contact {
-        padding: 5rem 0;
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
@@ -1437,38 +1420,29 @@ body {
         margin-top: 1rem;
     }
     
+    .section {
+        padding: 5rem 0;
+    }
+
     .hero-title {
         font-size: 2.5rem;
+        min-height: auto;
     }
     .hero-title .typing-line:last-child {
-        font-size: 1.8rem;
-    }
-    .hero-desc {
-        font-size: 1rem;
+        font-size: 1.75rem;
     }
     
     .section-title {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
-    .section-label {
-        font-size: 0.75rem;
-    }
-    
-    .about,
-    .portfolio,
-    .contact {
-        padding: 4rem 0;
+    .section-header {
+        margin-bottom: 2.5rem;
     }
     
-    .about-title {
-        font-size: 1.4rem;
+    .about-grid {
+        gap: 2.5rem;
     }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
+
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1477,13 +1451,15 @@ body {
     .contact-content {
         gap: 2rem;
     }
-    .contact-form {
-        padding: 1.5rem;
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .profile-pic {
-        width: 240px;
-        height: 240px;
+        width: 280px;
+        height: 280px;
     }
     
     .floating-card {
@@ -1495,53 +1471,5 @@ body {
     }
     .modal-title {
         font-size: 1.5rem;
-    }
-
-    .filter-buttons {
-        gap: 0.5rem;
-    }
-    .filter-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-title .typing-line:last-child {
-        font-size: 1.4rem;
-    }
-    .hero-actions {
-        flex-direction: column;
-    }
-    .btn {
-        justify-content: center;
-    }
-    .section-title {
-        font-size: 1.75rem;
-    }
-    .about,
-    .portfolio,
-    .contact {
-        padding: 3rem 0;
-    }
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-    }
-    .glow-effect {
-        width: 280px;
-        height: 280px;
-    }
-    .modal-container {
-        max-height: 95vh;
-    }
-    .modal-content {
-        padding: 1.5rem 1rem;
-    }
-    .container {
-        padding: 0 1.25rem;
     }
 }
