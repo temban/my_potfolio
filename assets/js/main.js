@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('.portfolio-image img').forEach(img => {
         img.addEventListener('error', function () {
-            this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#1c1c24' : '#d1d5db') + '" width="400" height="240"/><text fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#8a8a95' : '#6b7280') + '" font-family="Inter,sans-serif" font-size="16" text-anchor="middle" x="200" y="120">Image not available</text></svg>');
+            this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#1c1c24' : '#d1d5db') + '" width="400" height="240"/><text fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#8a8a95' : '#6b7280') + '" font-family="Outfit,sans-serif" font-size="16" text-anchor="middle" x="200" y="120">Image not available</text></svg>');
         });
     });
 
