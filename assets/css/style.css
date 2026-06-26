@@ -316,6 +316,7 @@ body {
     border-color: var(--accent-primary);
     box-shadow: 0 0 12px rgba(37, 99, 235, 0.15);
 }
+
 [data-theme="dark"] .theme-toggle:hover .toggle-track {
     box-shadow: 0 0 12px rgba(250, 204, 21, 0.15);
 }
@@ -330,6 +331,7 @@ body {
 .toggle-sun {
     color: var(--text-primary);
 }
+
 [data-theme="dark"] .toggle-sun {
     color: var(--text-muted);
 }
@@ -337,6 +339,7 @@ body {
 .toggle-moon {
     color: var(--text-muted);
 }
+
 [data-theme="dark"] .toggle-moon {
     color: var(--text-primary);
 }
