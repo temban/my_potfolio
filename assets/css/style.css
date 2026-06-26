@@ -501,6 +501,7 @@ body {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 550px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .hero-actions {
