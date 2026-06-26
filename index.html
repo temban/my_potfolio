@@ -23,12 +23,18 @@
                 <a href="#about" class="nav-link">About</a>
                 <a href="#portfolio" class="nav-link">Work</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="cta-btn">Let's Talk</a>
             </div>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                 <i class="fas fa-moon moon-icon"></i>
                 <i class="fas fa-sun sun-icon"></i>
             </button>
-            <a href="#contact" class="cta-btn">Let's Talk</a>
+            <a href="#contact" class="cta-btn" id="desktop-cta">Let's Talk</a>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
         </div>
     </nav>
@@ -38,7 +44,7 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text reveal-left">
                     <div class="badge">
                         <span>👋</span>
                         <span>Available for hire</span>
@@ -77,7 +83,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image reveal-right">
                     <div class="image-wrapper">
                         <div class="glow-effect"></div>
                         <img src="assets/images/profile.png" alt="Temban Blaise" class="profile-pic">
@@ -102,21 +108,21 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about reveal">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">About Me</span>
                 <h2 class="section-title">Building Digital Experiences</h2>
             </div>
-            <div class="about-grid">
-                <div class="about-image">
+            <div class="about-grid reveal-left">
+                <div class="about-image reveal-scale">
                     <img src="assets/images/profile.png" alt="Temban Blaise" class="about-photo">
                     <div class="experience-badge">
                         <span class="years">5+</span>
                         <span class="text">Years of Experience</span>
                     </div>
                 </div>
-                <div class="about-text">
+                <div class="about-text reveal-right">
                     <h3 class="about-title">Passionate Developer Based in Cameroon</h3>
                     <p class="about-paragraph">
                         I'm a dedicated software engineer with a passion for creating clean, efficient, and user-friendly applications. 
@@ -128,7 +134,7 @@
                     </p>
                     <div class="skills-container">
                         <h4 class="skills-title">Technologies I Work With</h4>
-                        <div class="skills-grid">
+                        <div class="skills-grid reveal-stagger">
                             <div class="skill-tag">Python</div>
                             <div class="skill-tag">JavaScript</div>
                             <div class="skill-tag">React</div>
@@ -147,13 +153,13 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio reveal">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
             </div>
-            <div class="portfolio-grid">
+            <div class="portfolio-grid reveal-stagger">
                 <div class="portfolio-item" data-project="study-ai">
                     <div class="portfolio-image">
                         <img src="assets/images/study-ai/iPhone 16 - 24.png" alt="Study AI">
@@ -231,13 +237,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact reveal">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Contact</span>
                 <h2 class="section-title">Let's Work Together</h2>
             </div>
-            <div class="contact-content">
+            <div class="contact-content reveal-right">
                 <div class="contact-info">
                     <h3 class="contact-title">Ready to start your project?</h3>
                     <p class="contact-desc">
