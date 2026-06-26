@@ -103,6 +103,45 @@ document.addEventListener('DOMContentLoaded', function () {
                 'assets/images/dga/2.png',
                 'assets/images/dga/10.png'
             ]
+        },
+        'ivissas': {
+            title: 'Ivissas',
+            description: 'A modern web platform for Ivissas, featuring clean UI and seamless user experience across devices.',
+            tags: ['Web Platform', 'UI/UX', 'Responsive'],
+            images: [
+                'assets/images/ivissas/preview.jpg',
+                'assets/images/ivissas/screen2.jpg',
+                'assets/images/ivissas/1.jpg'
+            ]
+        },
+        'amelia': {
+            title: 'Amelia',
+            description: 'Mobile application with a focus on clean design and intuitive user interactions.',
+            tags: ['Mobile', 'UI/UX', 'App Design'],
+            images: [
+                'assets/images/amelia/preview.jpg',
+                'assets/images/amelia/1.jpg',
+                'assets/images/amelia/photo_2023-01-04_11-22-20.jpg'
+            ]
+        },
+        'rpn': {
+            title: 'RPN',
+            description: 'User interface design project with modern aesthetics and clean visual hierarchy.',
+            tags: ['UI/UX', 'Design', 'Prototype'],
+            images: [
+                'assets/images/rpn/screen1.jpg',
+                'assets/images/rpn/screen2.jpg',
+                'assets/images/rpn/1.jpg'
+            ]
+        },
+        'godlove': {
+            title: 'GodLove',
+            description: 'Landing page and web design project showcasing brand identity and modern web aesthetics.',
+            tags: ['Web Design', 'Landing Page', 'Branding'],
+            images: [
+                'assets/images/godlove/preview.png',
+                'assets/images/godlove/landing page.png'
+            ]
         }
     };
 
