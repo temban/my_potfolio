@@ -175,8 +175,12 @@ body {
 }
 
 .logo-img {
-    height: 40px;
+    height: 48px;
     width: auto;
+    transition: filter 0.3s ease;
+}
+[data-theme="dark"] .logo-img {
+    filter: brightness(2) drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
 }
 
 .hamburger {
