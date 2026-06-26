@@ -354,6 +354,10 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+#desktop-cta {
+    margin-left: auto;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -725,7 +729,7 @@ body {
 .skills-title {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.75rem;
 }
 
 .skills-grid {
@@ -1543,6 +1547,11 @@ body {
 
     #desktop-cta {
         display: none;
+    }
+
+    .nav-links .cta-btn {
+        display: inline-flex;
+        margin-top: 1rem;
     }
 
     .section {
