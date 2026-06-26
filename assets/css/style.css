@@ -308,31 +308,31 @@ body {
     box-shadow: var(--shadow-accent);
 }
 
-.moon-icon,
-.sun-icon {
+.sun-icon,
+.moon-icon {
     font-size: 1.2rem;
     position: absolute;
     transition: all 0.4s ease;
 }
 
-.moon-icon {
+.sun-icon {
     color: var(--text-primary);
     opacity: 1;
     transform: translateY(0);
 }
 
-[data-theme="dark"] .moon-icon {
+[data-theme="dark"] .sun-icon {
     opacity: 0;
     transform: translateY(20px);
 }
 
-.sun-icon {
+.moon-icon {
     color: var(--text-primary);
     opacity: 0;
     transform: translateY(-20px);
 }
 
-[data-theme="dark"] .sun-icon {
+[data-theme="dark"] .moon-icon {
     opacity: 1;
     transform: translateY(0);
 }
@@ -352,10 +352,6 @@ body {
 .cta-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-#desktop-cta {
-    margin-left: auto;
 }
 
 /* Hero Section */
