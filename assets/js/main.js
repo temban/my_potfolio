@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
 
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', newTheme);
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalGallery = document.getElementById('modal-gallery');
 
     document.querySelectorAll('.portfolio-image img').forEach(img => {
-        img.addEventListener('error', function() {
+        img.addEventListener('error', function () {
             this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#1c1c24' : '#d1d5db') + '" width="400" height="240"/><text fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#8a8a95' : '#6b7280') + '" font-family="Inter,sans-serif" font-size="16" text-anchor="middle" x="200" y="120">Image not available</text></svg>');
         });
     });
 
     document.querySelectorAll('.portfolio-item').forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const projectId = this.getAttribute('data-project');
             const project = projectsData[projectId];
             if (project) {
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     img.src = imgSrc;
                     img.alt = project.title;
                     img.loading = 'lazy';
-                    img.addEventListener('error', function() {
+                    img.addEventListener('error', function () {
                         this.style.display = 'none';
                     });
                     modalGallery.appendChild(img);
@@ -154,19 +154,19 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
     modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e) {
+    modal.addEventListener('click', function (e) {
         if (e.target === modal) {
             closeModal();
         }
     });
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
     });
 
     const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const btn = this.querySelector('.submit-btn');
         const original = btn.innerHTML;
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navOverlay.classList.add('active');
     }
     if (hamburger && mobileNav) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             const isOpen = mobileNav.classList.contains('active');
             isOpen ? closeNav() : openNav();
         });
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             filterButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             const filter = this.dataset.filter;
