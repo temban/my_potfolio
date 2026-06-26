@@ -15,7 +15,7 @@
     --text-muted: #6b7280;
     --accent-primary: #0c399a;
     --accent-secondary: #3b82f6;
-    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+    --accent-gradient: linear-gradient(135deg, #062464 0%, #80b9ff 100%);
     --border-color: rgba(17, 24, 39, 0.12);
     --shadow-soft: 0 10px 30px rgba(17, 24, 39, 0.15);
     --shadow-accent: 0 10px 30px rgba(38, 84, 185, 0.3);
@@ -839,20 +839,20 @@ body {
 }
 
 .portfolio-info {
-    padding: 1rem 1.25rem 1.25rem;
+    padding: 1.5rem;
 }
 
 .portfolio-category {
     color: var(--accent-primary);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 .portfolio-name {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -1543,11 +1543,6 @@ body {
 
     #desktop-cta {
         display: none;
-    }
-
-    .nav-links .cta-btn {
-        display: inline-flex;
-        margin-top: 1rem;
     }
 
     .section {
