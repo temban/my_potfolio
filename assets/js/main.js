@@ -113,6 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTags = document.getElementById('modal-tags');
     const modalGallery = document.getElementById('modal-gallery');
 
+    document.querySelectorAll('.portfolio-image img').forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#1c1c24' : '#d1d5db') + '" width="400" height="240"/><text fill="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#8a8a95' : '#6b7280') + '" font-family="Inter,sans-serif" font-size="16" text-anchor="middle" x="200" y="120">Image not available</text></svg>');
+        });
+    });
+
     document.querySelectorAll('.portfolio-item').forEach(item => {
         item.addEventListener('click', function() {
             const projectId = this.getAttribute('data-project');
@@ -131,6 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.alt = project.title;
+                    img.loading = 'lazy';
+                    img.addEventListener('error', function() {
+                        this.style.display = 'none';
+                    });
                     modalGallery.appendChild(img);
                 });
                 modal.classList.add('active');
@@ -174,18 +184,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.nav-overlay');
+    function closeNav() {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        navOverlay.classList.remove('active');
+    }
+    function openNav() {
+        hamburger.classList.add('active');
+        mobileNav.classList.add('active');
+        navOverlay.classList.add('active');
+    }
     if (hamburger && mobileNav) {
         hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            mobileNav.classList.toggle('active');
+            const isOpen = mobileNav.classList.contains('active');
+            isOpen ? closeNav() : openNav();
         });
         mobileNav.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-            });
+            link.addEventListener('click', closeNav);
         });
+        navOverlay.addEventListener('click', closeNav);
     }
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     const progressBar = document.createElement('div');
     progressBar.id = 'progress-bar';
@@ -332,12 +363,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle && window.innerWidth > 768) {
         const originalHTML = heroTitle.innerHTML;
-        const textParts = originalHTML.split('<br>');
-        if (textParts.length >= 2) {
+        const brIndex = originalHTML.indexOf('<br>');
+        if (brIndex !== -1) {
             heroTitle.innerHTML = '';
             const line1 = document.createElement('span');
             line1.className = 'typing-line';
-            line1.textContent = textParts[0].trim();
+            line1.innerHTML = originalHTML.substring(0, brIndex).trim();
             heroTitle.appendChild(line1);
             heroTitle.appendChild(document.createElement('br'));
             const line2 = document.createElement('span');
