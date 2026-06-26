@@ -501,7 +501,6 @@ body {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 550px;
-    font-family: 'Dancing Script', cursive;
 }
 
 .hero-actions {
@@ -735,6 +734,7 @@ body {
     margin-bottom: 0;
     font-size: 1rem;
     line-height: 1.7;
+    font-family: 'Kalam', cursive;
 }
 
 .about-paragraph+.skills-wrapper {
@@ -880,6 +880,7 @@ body {
 .portfolio-name {
     font-size: 1.25rem;
     font-weight: 600;
+    font-family: 'Kalam', cursive;
 }
 
 /* Contact Section */
