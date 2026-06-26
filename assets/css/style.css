@@ -596,58 +596,70 @@ body {
 }
 
 /* About Section */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
+.about-intro {
+    display: flex;
     align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
 }
 
-.about-image {
-    position: relative;
+.about-avatar {
+    flex-shrink: 0;
 }
 
-.about-photo {
-    width: 100%;
-    border-radius: 24px;
-    box-shadow: var(--shadow-soft);
-}
-
-.experience-badge {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    background: var(--accent-gradient);
-    padding: 1.25rem 1.75rem;
-    border-radius: 16px;
+.about-avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-primary);
     box-shadow: var(--shadow-accent);
+}
+
+.about-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.about-role {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.about-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 500px;
+}
+
+.about-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: white;
 }
 
-.experience-badge .years {
-    font-size: 2rem;
+.about-stat-num {
+    font-size: 1.25rem;
     font-weight: 800;
+    color: var(--accent-primary);
 }
 
-.experience-badge .text {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.about-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.about-paragraph {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.8;
+.about-stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 .skills-wrapper {
@@ -1368,9 +1380,20 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-content,
-    .about-grid,
     .contact-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .about-desc {
+        max-width: 100%;
+    }
+    .about-stats {
+        justify-content: center;
     }
     
     .hero-content {
@@ -1456,8 +1479,22 @@ body {
         margin-bottom: 2.5rem;
     }
     
-    .about-grid {
-        gap: 2.5rem;
+    .about-intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    .about-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+    .about-desc {
+        max-width: 100%;
+    }
+    .about-stats {
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     .portfolio-grid {
