@@ -328,21 +328,17 @@ body {
 }
 
 .toggle-sun {
-    color: var(--text-muted);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    color: var(--text-primary);
 }
-[data-theme="light"] .toggle-sun {
-    color: #f59e0b;
-    text-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
+[data-theme="dark"] .toggle-sun {
+    color: var(--text-muted);
 }
 
 .toggle-moon {
     color: var(--text-muted);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 [data-theme="dark"] .toggle-moon {
-    color: #facc15;
-    text-shadow: 0 0 6px rgba(250, 204, 21, 0.5);
+    color: var(--text-primary);
 }
 
 .toggle-knob {
@@ -361,11 +357,6 @@ body {
     left: 31px;
 }
 
-.toggle-sun,
-.toggle-moon {
-    position: relative;
-    z-index: 1;
-}
 
 .cta-btn {
     background: var(--accent-gradient);
