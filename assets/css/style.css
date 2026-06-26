@@ -329,16 +329,20 @@ body {
 
 .toggle-sun {
     color: var(--text-muted);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-[data-theme="dark"] .toggle-sun {
-    color: var(--text-muted);
+[data-theme="light"] .toggle-sun {
+    color: #f59e0b;
+    text-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
 }
 
 .toggle-moon {
     color: var(--text-muted);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 [data-theme="dark"] .toggle-moon {
-    color: var(--text-muted);
+    color: #facc15;
+    text-shadow: 0 0 6px rgba(250, 204, 21, 0.5);
 }
 
 .toggle-knob {
