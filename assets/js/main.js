@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     themeToggle.addEventListener('click', function() {
@@ -166,6 +166,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const contactForm = document.querySelector('.contact-form');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    let toastTimer;
+
+    function showToast(msg) {
+        toastMsg.textContent = msg;
+        toast.classList.add('visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('visible'), 3000);
+    }
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const btn = this.querySelector('.submit-btn');
@@ -174,12 +185,30 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.disabled = true;
         setTimeout(() => {
             btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            showToast('Thanks! I\'ll get back to you soon.');
             setTimeout(() => {
                 btn.innerHTML = original;
                 btn.disabled = false;
             }, 2000);
-        }, 1500);
+        }, 1200);
         this.reset();
+    });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
     });
 
     const hamburger = document.querySelector('.hamburger');
@@ -375,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
             line2.className = 'typing-line gradient-text typing-text';
             heroTitle.appendChild(line2);
 
-            const words = ['Software Engineer', 'Full-Stack Developer', 'Backend Architect', 'Problem Solver'];
+            const words = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Problem Solver'];
             let wordIndex = 0;
             let charIndex = 0;
             let isDeleting = false;

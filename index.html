@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -159,8 +159,15 @@
                 <span class="section-label">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
             </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="erp">ERP</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+            </div>
             <div class="portfolio-grid reveal-stagger">
-                <div class="portfolio-item" data-project="study-ai">
+                <div class="portfolio-item" data-project="study-ai" data-category="ai">
                     <div class="portfolio-image">
                         <img src="assets/images/study-ai/iPhone 16 - 24.png" alt="Study AI" loading="lazy">
                         <div class="portfolio-overlay">
@@ -172,7 +179,7 @@
                         <h3 class="portfolio-name">Study AI</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="nationwork">
+                <div class="portfolio-item" data-project="nationwork" data-category="web">
                     <div class="portfolio-image">
                         <img src="assets/images/nationwork/Web Site Page Comp.png" alt="NationWork" loading="lazy">
                         <div class="portfolio-overlay">
@@ -184,7 +191,7 @@
                         <h3 class="portfolio-name">NationWork</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="tameri">
+                <div class="portfolio-item" data-project="tameri" data-category="mobile">
                     <div class="portfolio-image">
                         <img src="assets/images/tameri-network/home.png" alt="Tameri Network" loading="lazy">
                         <div class="portfolio-overlay">
@@ -196,7 +203,7 @@
                         <h3 class="portfolio-name">Tameri Network</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="willonhair">
+                <div class="portfolio-item" data-project="willonhair" data-category="erp">
                     <div class="portfolio-image">
                         <img src="assets/images/willonhair/01- POS coiffeur - Commande à etat NOUVEAU.jpg" alt="WillOnHair" loading="lazy">
                         <div class="portfolio-overlay">
@@ -208,7 +215,7 @@
                         <h3 class="portfolio-name">WillOnHair</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="hubkilo">
+                <div class="portfolio-item" data-project="hubkilo" data-category="erp">
                     <div class="portfolio-image">
                         <img src="assets/images/hubkilo/1.jpg" alt="HubKilo" loading="lazy">
                         <div class="portfolio-overlay">
@@ -220,7 +227,7 @@
                         <h3 class="portfolio-name">HubKilo</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="dga">
+                <div class="portfolio-item" data-project="dga" data-category="web">
                     <div class="portfolio-image">
                         <img src="assets/images/dga/1.png" alt="DGA Express" loading="lazy">
                         <div class="portfolio-overlay">
@@ -337,6 +344,10 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     <div class="nav-overlay"></div>
+    <div id="toast">
+        <span class="toast-icon"><i class="fas fa-check"></i></span>
+        <span id="toast-message">Message sent!</span>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
