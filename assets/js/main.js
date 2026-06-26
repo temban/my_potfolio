@@ -166,17 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const contactForm = document.querySelector('.contact-form');
-    const toast = document.getElementById('toast');
-    const toastMsg = document.getElementById('toast-message');
-    let toastTimer;
-
-    function showToast(msg) {
-        toastMsg.textContent = msg;
-        toast.classList.add('visible');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove('visible'), 3000);
-    }
-
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const btn = this.querySelector('.submit-btn');
@@ -185,30 +174,12 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.disabled = true;
         setTimeout(() => {
             btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-            showToast('Thanks! I\'ll get back to you soon.');
             setTimeout(() => {
                 btn.innerHTML = original;
                 btn.disabled = false;
             }, 2000);
-        }, 1200);
+        }, 1500);
         this.reset();
-    });
-
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            const filter = this.dataset.filter;
-            portfolioItems.forEach(item => {
-                if (filter === 'all' || item.dataset.category === filter) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
-        });
     });
 
     const hamburger = document.querySelector('.hamburger');
@@ -301,6 +272,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.card-title').forEach(el => {
         counterObserver.observe(el);
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    const skillBarObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fill = entry.target;
+                fill.style.width = fill.style.width || '0%';
+                fill.classList.add('animated');
+                skillBarObserver.unobserve(fill);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.skill-bar-fill').forEach(el => {
+        skillBarObserver.observe(el);
     });
 
     const canvas = document.createElement('canvas');

@@ -503,20 +503,6 @@ body {
     position: relative;
 }
 
-.image-wrapper::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 27px;
-    background: var(--accent-gradient);
-    z-index: -1;
-    opacity: 0.5;
-    transition: opacity 0.4s ease;
-}
-.image-wrapper:hover::before {
-    opacity: 1;
-}
-
 .glow-effect {
     position: absolute;
     top: 50%;
@@ -526,7 +512,7 @@ body {
     height: 450px;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
     border-radius: 50%;
-    z-index: -2;
+    z-index: -1;
 }
 
 [data-theme="dark"] .glow-effect {
@@ -538,8 +524,6 @@ body {
     height: 400px;
     object-fit: contain;
     border-radius: 24px;
-    position: relative;
-    z-index: 1;
 }
 
 .floating-card {
@@ -699,77 +683,6 @@ body {
     color: #fff;
     transform: translateY(-3px);
     box-shadow: var(--shadow-accent);
-}
-
-/* Filter Buttons */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-}
-.filter-btn {
-    padding: 0.6rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid var(--border-color);
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
-}
-.filter-btn:hover {
-    border-color: var(--accent-primary);
-    color: var(--accent-primary);
-}
-.filter-btn.active {
-    background: var(--accent-gradient);
-    color: #fff;
-    border-color: transparent;
-    box-shadow: var(--shadow-accent);
-}
-
-.portfolio-item.hidden {
-    display: none;
-}
-
-/* Toast */
-#toast {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 1rem 2rem;
-    box-shadow: var(--shadow-soft);
-    z-index: 3000;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    font-weight: 500;
-}
-#toast.visible {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-#toast .toast-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--accent-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 0.85rem;
 }
 
 /* Portfolio Section */
@@ -1169,6 +1082,103 @@ body {
 .modal-gallery img:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fade-in-up 1s ease 1.5s forwards;
+    opacity: 0;
+}
+.scroll-arrow {
+    animation: scroll-bounce 2s ease-in-out infinite;
+    font-size: 1rem;
+    color: var(--accent-primary);
+}
+@keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(8px); opacity: 1; }
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+.filter-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+.filter-btn.active {
+    background: var(--accent-gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: var(--shadow-accent);
+}
+
+.portfolio-item.hidden {
+    display: none;
+}
+
+.skills-bars {
+    margin-top: 2rem;
+}
+.skill-bar {
+    margin-bottom: 1.25rem;
+}
+.skill-bar:last-child {
+    margin-bottom: 0;
+}
+.skill-bar-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.skill-bar-info span:last-child {
+    color: var(--accent-primary);
+}
+.skill-bar-track {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill-bar-fill {
+    height: 100%;
+    background: var(--accent-gradient);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-bar-fill.animated {
+    /* width is set via inline style, just trigger transition */;
 }
 
 /* Footer */
