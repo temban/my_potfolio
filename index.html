@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temban Blaise | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="#" class="logo">
-                <img src="assets/images/logo-.png" alt="Temban Blaise Logo" class="logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#portfolio" class="nav-link">Work</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="logo">
+                    <img src="assets/images/tba_logo_clean.png" alt="TBA Logo" class="logo-img">
+                </a>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#portfolio" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span class="toggle-track">
+                        <i class="fas fa-sun toggle-sun"></i>
+                        <span class="toggle-knob"></span>
+                        <i class="fas fa-moon toggle-moon"></i>
+                    </span>
+                </button>
+                <a href="#contact" class="cta-btn" id="desktop-cta">Let's Talk</a>
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                <span class="toggle-track">
-                    <i class="fas fa-sun toggle-sun"></i>
-                    <span class="toggle-knob"></span>
-                    <i class="fas fa-moon toggle-moon"></i>
-                </span>
-            </button>
-            <a href="#contact" class="cta-btn" id="desktop-cta">Let's Talk</a>
-            <button class="hamburger" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
         </div>
     </nav>
 
@@ -57,9 +61,18 @@
                         <span class="gradient-text">Software Engineer</span>
                     </h1>
                     <p class="hero-desc">
-                        I build scalable, high-performance applications that solve real problems. 
+                        I build scalable, high-performance applications that solve real problems.
                         With 3+ years of experience, I turn ideas into reality.
                     </p>
+
+                    <div class="premium-motto-wrapper reveal">
+                        <div class="motto-glow"></div>
+                        <div class="premium-motto">
+                            <i class="fas fa-bolt motto-icon"></i>
+                            <p class="motto-text">I don't put my hands in things that fail.</p>
+                        </div>
+                    </div>
+
                     <div class="hero-actions">
                         <a href="#portfolio" class="btn btn-primary">
                             <span>View My Work</span>
@@ -71,45 +84,28 @@
                         </a>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank" class="social-link">
+                        <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank"
+                            class="social-link">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://github.com/temban" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-dev"></i>
                         </a>
                     </div>
                 </div>
                 <div class="hero-image reveal-right">
                     <div class="image-wrapper">
                         <div class="glow-effect"></div>
-                        <img src="assets/images/landing.png" alt="Temban Blaise" class="profile-pic" loading="lazy">
+                        <img src="assets/images/profile-removes-background.png" alt="Temban Blaise" class="profile-pic"
+                            loading="lazy">
                     </div>
-                    <div class="floating-card card-1">
+                    <div class="floating-card card-2">
                         <div class="card-icon">🟢</div>
                         <div class="card-content">
                             <div class="card-title">3+ Years</div>
                             <div class="card-sub">Experience</div>
                         </div>
                     </div>
-                    <div class="floating-card card-2">
-                        <div class="card-icon">🚀</div>
-                        <div class="card-content">
-                            <div class="card-title">20+</div>
-                            <div class="card-sub">Projects</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span class="scroll-text">Scroll down</span>
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -124,7 +120,8 @@
             </div>
             <div class="about-grid reveal-left">
                 <div class="about-image reveal-scale">
-                    <img src="assets/images/profile-removes-background.png" alt="Temban Blaise" class="about-photo" loading="lazy">
+                    <img src="assets/images/about_profile.jpg" alt="Temban Blaise" class="about-photo"
+                        loading="lazy">
                     <div class="floating-card about-card">
                         <div class="card-icon">🚀</div>
                         <div class="card-content">
@@ -134,20 +131,31 @@
                     </div>
                 </div>
                 <div class="about-text reveal-right">
-                    <div class="about-badge">Full-Stack Developer</div>
+                    <div class="about-badge">Software Engineer</div>
                     <p class="about-paragraph">
-                        I build backend systems, APIs, and web apps that actually work. 3+ years turning ideas into clean, scalable code. Looking for part-time opportunities where I can add value fast.
+                        With over 3 years of experience, I specialize in architecting high-performance software and
+                        scalable microservices. I build robust backends with Python (FastAPI, Django, Flask) and Node.js
+                        (JavaScript/TypeScript), delivering fully documented APIs (Swagger). My expertise extends to
+                        modern frontends with Vue.js, mobile development using Flutter, and comprehensive ERP solutions
+                        utilizing Odoo.
+                    </p>
+                    <p class="about-paragraph" style="margin-top: 1rem;">
+                        In distributed systems, I leverage Eureka for service discovery, Kafka for asynchronous
+                        event-driven communication, API Gateways, and WebSockets for real-time functionality. I
+                        prioritize clean, reusable code optimized for processing massive datasets, ensuring long-term
+                        maintainability. Experienced in both remote and on-site environments, I thrive in agile teams
+                        utilizing structured Git workflows to deliver impactful projects.
                     </p>
                     <div class="skills-wrapper">
                         <div class="skills-col">
                             <h4 class="skills-title">Technologies</h4>
                             <div class="skills-grid reveal-stagger">
                                 <div class="skill-tag">Python</div>
-                                <div class="skill-tag">Node.js</div>
+                                <div class="skill-tag">JavaScript/TypeScript</div>
                                 <div class="skill-tag">FastAPI</div>
-                                <div class="skill-tag">Odoo</div>
-                                <div class="skill-tag">JavaScript</div>
+                                <div class="skill-tag">Node.js</div>
                                 <div class="skill-tag">Vue.js</div>
+                                <div class="skill-tag">Odoo</div>
                                 <div class="skill-tag">PostgreSQL</div>
                                 <div class="skill-tag">MongoDB</div>
                                 <div class="skill-tag">Docker</div>
@@ -208,33 +216,9 @@
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="portfolio-grid reveal-stagger">
-                <div class="portfolio-item" data-project="study-ai" data-category="ai">
-                    <div class="portfolio-image">
-                        <img src="assets/images/study-ai/iPhone 16 - 24.png" alt="Study AI" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="view-project">View Details</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">AI Platform</span>
-                        <h3 class="portfolio-name">Study AI</h3>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-project="nationwork" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nationwork/Web Site Page Comp.png" alt="NationWork" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="view-project">View Details</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Web Platform</span>
-                        <h3 class="portfolio-name">NationWork</h3>
-                    </div>
-                </div>
                 <div class="portfolio-item" data-project="tameri" data-category="mobile">
                     <div class="portfolio-image">
-                        <img src="assets/images/tameri-network/home.png" alt="Tameri Network" loading="lazy">
+                        <img src="assets/images/tameri-network/1.jpg" alt="Tameri Network" loading="lazy">
                         <div class="portfolio-overlay">
                             <span class="view-project">View Details</span>
                         </div>
@@ -244,9 +228,46 @@
                         <h3 class="portfolio-name">Tameri Network</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="willonhair" data-category="erp">
+                <div class="portfolio-item" data-project="nationwork" data-category="web">
                     <div class="portfolio-image">
-                        <img src="assets/images/willonhair/01- POS coiffeur - Commande à etat NOUVEAU.jpg" alt="WillOnHair" loading="lazy">
+                        <img src="assets/images/nationwork/1.png" alt="NationWork" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Web Platform</span>
+                        <h3 class="portfolio-name">NationWork</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="ivissas" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="assets/images/ivissas/1.jpg" alt="Ivissas" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Web Platform</span>
+                        <h3 class="portfolio-name">Ivissas</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="godlove" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="assets/images/godlove/landing page.png" alt="GodLove" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Web Design</span>
+                        <h3 class="portfolio-name">GodLove</h3>
+                    </div>
+                </div>
+            <div class="portfolio-item" data-project="willonhair" data-category="erp">
+                    <div class="portfolio-image">
+                        <img src="assets/images/willonhair/1.jpg"
+                            alt="WillOnHair" loading="lazy">
                         <div class="portfolio-overlay">
                             <span class="view-project">View Details</span>
                         </div>
@@ -254,6 +275,18 @@
                     <div class="portfolio-info">
                         <span class="portfolio-category">Odoo ERP</span>
                         <h3 class="portfolio-name">WillOnHair</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-project="study-ai" data-category="ai">
+                    <div class="portfolio-image">
+                        <img src="assets/images/study-ai/1.png" alt="Study AI" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Details</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">AI Platform</span>
+                        <h3 class="portfolio-name">Study AI</h3>
                     </div>
                 </div>
                 <div class="portfolio-item" data-project="hubkilo" data-category="erp">
@@ -280,33 +313,9 @@
                         <h3 class="portfolio-name">DGA Express</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="ivissas" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="assets/images/ivissas/preview.jpg" alt="Ivissas" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="view-project">View Details</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Web Platform</span>
-                        <h3 class="portfolio-name">Ivissas</h3>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-project="amelia" data-category="mobile">
-                    <div class="portfolio-image">
-                        <img src="assets/images/amelia/preview.jpg" alt="Amelia" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="view-project">View Details</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <span class="portfolio-category">Mobile App</span>
-                        <h3 class="portfolio-name">Amelia</h3>
-                    </div>
-                </div>
                 <div class="portfolio-item" data-project="rpn" data-category="design">
                     <div class="portfolio-image">
-                        <img src="assets/images/rpn/screen1.jpg" alt="RPN" loading="lazy">
+                        <img src="assets/images/rpn/1.jpg" alt="RPN" loading="lazy">
                         <div class="portfolio-overlay">
                             <span class="view-project">View Details</span>
                         </div>
@@ -316,19 +325,19 @@
                         <h3 class="portfolio-name">RPN</h3>
                     </div>
                 </div>
-                <div class="portfolio-item" data-project="godlove" data-category="design">
+                <div class="portfolio-item" data-project="amelia" data-category="mobile">
                     <div class="portfolio-image">
-                        <img src="assets/images/godlove/preview.png" alt="GodLove" loading="lazy">
+                        <img src="assets/images/amelia/1.jpg" alt="Amelia" loading="lazy">
                         <div class="portfolio-overlay">
                             <span class="view-project">View Details</span>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <span class="portfolio-category">Web Design</span>
-                        <h3 class="portfolio-name">GodLove</h3>
+                        <span class="portfolio-category">Mobile App</span>
+                        <h3 class="portfolio-name">Amelia</h3>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
     </section>
 
@@ -343,7 +352,8 @@
                 <div class="contact-info">
                     <h3 class="contact-title">Ready to start your project?</h3>
                     <p class="contact-desc">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision.
                     </p>
                     <div class="contact-methods">
                         <div class="contact-method">
@@ -352,7 +362,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <a href="mailto:contact@temban.com">contact@temban.com</a>
+                                <a href="mailto:tembanblaise12@gmail.com">tembanblaise12@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -360,8 +370,8 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="contact-details">
-                                <h4>Phone</h4>
-                                <span>+237 6XX XXX XXX</span>
+                                <h4>Phone / WhatsApp</h4>
+                                <span>+237 670105992</span>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -370,29 +380,14 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Location</h4>
-                                <span>Cameroon</span>
+                                <span>Yaoundé, Cameroon</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-input" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                <div class="contact-image-wrapper">
+                    <img src="assets/images/contact_me.jpg" alt="Temban Blaise Projects" class="contact-poster">
+                </div>
             </div>
         </div>
     </section>
@@ -402,13 +397,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/images/logo.png" alt="Temban Blaise">
+                    <a href="#" class="logo">
+                        <img src="assets/images/tba_logo_clean.png" alt="TBA Logo" class="logo-img">
+                    </a>
                 </div>
                 <p class="footer-text">© 2026 Temban Blaise. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/tembanblaise-ayim-a07732212" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/tembanblaise" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -436,4 +433,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

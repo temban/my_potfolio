@@ -39,113 +39,193 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     window.addEventListener('scroll', setActiveLink);
 
+    
     const projectsData = {
-        'study-ai': {
-            title: 'Study AI',
-            description: 'An AI-powered learning platform built with FastAPI and PostgreSQL. It features APIs for processing PDFs, images, and videos (OCR, FFmpeg), AI for summaries and quizzes, and a RAG-based chatbot for document understanding.',
-            tags: ['Python', 'FastAPI', 'PostgreSQL', 'AI/RAG', 'OCR'],
-            images: [
-                'assets/images/study-ai/iPhone 16 - 24.png',
-                'assets/images/study-ai/iPhone 16 - 55.png',
-                'assets/images/study-ai/iPhone 16 - 28.png',
-                'assets/images/study-ai/iPhone 16 - 41.png',
-                'assets/images/study-ai/iPhone 16 - 90.png'
+        'tameri': {
+            title: 'Tameri Network',
+            description: 'Tameri Network is a comprehensive, full-stack social platform built to seamlessly connect donors and visitors with orphanages. Designed with a scalable microservices architecture, the application facilitates community engagement through a robust social feed, secure real-time messaging, and a transparent donation system.',
+            tags: ['Flutter', 'FastAPI', 'Java (Eureka)', 'PostgreSQL', 'Kafka', 'WebSockets', 'MinIO'],
+            media: [
+                'assets/images/tameri-network/1.jpg',
+                'assets/images/tameri-network/1b.jpg',
+                'assets/images/tameri-network/1c.jpg',
+                'assets/images/tameri-network/2.jpg',
+                'assets/images/tameri-network/2a.jpg',
+                'assets/images/tameri-network/2b.jpg',
+                'assets/images/tameri-network/2c.jpg',
+                'assets/images/tameri-network/3.jpg',
+                'assets/images/tameri-network/3a.jpg',
+                'assets/images/tameri-network/3b.jpg',
+                'assets/images/tameri-network/3c.jpg',
+                'assets/images/tameri-network/4.jpg',
+                'assets/images/tameri-network/5.jpg',
+                'assets/images/tameri-network/5a.jpg',
+                'assets/images/tameri-network/7.jpg',
+                'assets/images/tameri-network/7a.jpg',
+                'assets/images/tameri-network/8.jpg',
+                'assets/images/tameri-network/9.jpg',
+                'assets/images/tameri-network/9a.jpg',
+                'assets/images/tameri-network/9b.jpg',
+                'assets/images/tameri-network/10.jpg'
             ]
         },
         'nationwork': {
-            title: 'NationWork',
-            description: 'A platform connecting freelancers and clients. Developed robust backend architecture to handle user authentication, job postings, and secure communication channels.',
-            tags: ['Backend', 'API Design', 'Architecture'],
-            images: [
-                'assets/images/nationwork/Web Site Page Comp.png',
-                'assets/images/nationwork/Slide Comp.png',
-                'assets/images/nationwork/Auth Creation Compte Client - Freelancer.png',
-                'assets/images/nationwork/31.png'
-            ]
-        },
-        'tameri': {
-            title: 'Tameri Network',
-            description: 'A comprehensive mobile and web application system featuring splash screens, secure login/OTP verification, user onboarding, and notification systems.',
-            tags: ['Microservices', 'UI/UX Backend', 'Security'],
-            images: [
-                'assets/images/tameri-network/home.png',
-                'assets/images/tameri-network/Login.png',
-                'assets/images/tameri-network/Splash screen.png',
-                'assets/images/tameri-network/OTP code.png'
-            ]
-        },
-        'willonhair': {
-            title: 'WillOnHair',
-            description: 'A comprehensive Salon ERP built for a client in Belgium using Odoo. It includes custom POS modules, API integrations with Flutter frontend, and a QR-based loyalty tracking system.',
-            tags: ['Odoo', 'ERP', 'Python', 'POS', 'API'],
-            images: [
-                'assets/images/willonhair/01- POS coiffeur - Commande à etat NOUVEAU.jpg',
-                'assets/images/willonhair/02- POS coiffeur - Commande à etat EN COURS.jpg',
-                'assets/images/willonhair/1.jpg',
-                'assets/images/willonhair/07- Sélection du client.jpg'
-            ]
-        },
-        'hubkilo': {
-            title: 'HubKilo',
-            description: 'Logistics and parcel delivery management system. Developed automated actions, route tracking, and comprehensive reporting modules.',
-            tags: ['Logistics', 'Odoo', 'Automation'],
-            images: [
-                'assets/images/hubkilo/1.jpg',
-                'assets/images/hubkilo/1b.jpg'
-            ]
-        },
-        'dga': {
-            title: 'DGA Express',
-            description: 'Travel and package management portal. Integrated booking systems, marketplace, and customer communication tools.',
-            tags: ['Booking System', 'Marketplace', 'Web App'],
-            images: [
-                'assets/images/dga/1.png',
-                'assets/images/dga/2.png',
-                'assets/images/dga/10.png'
+            title: 'Nation Work',
+            description: 'Nation Work is a comprehensive, full-stack freelance and gig marketplace platform designed to seamlessly connect clients with skilled service providers. It manages the entire lifecycle of freelance engagements—from job posting and bidding to real-time communication, scheduling, and secure payments.',
+            tags: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'WebSockets', 'JWT', 'MinIO'],
+            media: [
+                'assets/images/nationwork/1.png',
+                'assets/images/nationwork/2.png',
+                'assets/images/nationwork/3.png',
+                'assets/images/nationwork/4.png',
+                'assets/images/nationwork/5.png',
+                'assets/images/nationwork/6.png',
+                'assets/images/nationwork/7.png',
+                'assets/images/nationwork/8.png',
+                'assets/images/nationwork/9.png',
+                'assets/images/nationwork/10.png',
+                'assets/images/nationwork/11.png',
+                'assets/images/nationwork/12.png',
+                'assets/images/nationwork/13.png',
+                'assets/images/nationwork/14.png',
+                'assets/images/nationwork/15.png',
+                'assets/images/nationwork/16.png'
             ]
         },
         'ivissas': {
             title: 'Ivissas',
-            description: 'A modern web platform for Ivissas, featuring clean UI and seamless user experience across devices.',
+            description: 'A modern web platform for Ivissas, featuring a clean user interface, secure authentication, and a seamless user experience across devices. It allows users to manage services effortlessly.',
             tags: ['Web Platform', 'UI/UX', 'Responsive'],
-            images: [
-                'assets/images/ivissas/preview.jpg',
-                'assets/images/ivissas/screen2.jpg',
-                'assets/images/ivissas/1.jpg'
-            ]
-        },
-        'amelia': {
-            title: 'Amelia',
-            description: 'Mobile application with a focus on clean design and intuitive user interactions.',
-            tags: ['Mobile', 'UI/UX', 'App Design'],
-            images: [
-                'assets/images/amelia/preview.jpg',
-                'assets/images/amelia/1.jpg',
-                'assets/images/amelia/photo_2023-01-04_11-22-20.jpg'
-            ]
-        },
-        'rpn': {
-            title: 'RPN',
-            description: 'User interface design project with modern aesthetics and clean visual hierarchy.',
-            tags: ['UI/UX', 'Design', 'Prototype'],
-            images: [
-                'assets/images/rpn/screen1.jpg',
-                'assets/images/rpn/screen2.jpg',
-                'assets/images/rpn/1.jpg'
+            media: [
+                'assets/images/ivissas/1.jpg',
+                'assets/images/ivissas/2.jpg',
+                'assets/images/ivissas/3.jpg',
+                'assets/images/ivissas/4.jpg',
+                'assets/images/ivissas/5.jpg',
+                'assets/images/ivissas/6.jpg',
+                'assets/images/ivissas/7.jpg',
+                'assets/images/ivissas/8.jpg',
+                'assets/images/ivissas/9.jpg'
             ]
         },
         'godlove': {
             title: 'GodLove',
-            description: 'Landing page and web design project showcasing brand identity and modern web aesthetics.',
+            description: 'Landing page and web design project showcasing brand identity and modern web aesthetics. Features a clean layout, strong typography, and smooth scrolling experiences.',
             tags: ['Web Design', 'Landing Page', 'Branding'],
-            images: [
-                'assets/images/godlove/preview.png',
-                'assets/images/godlove/landing page.png'
+            media: [
+                'assets/images/godlove/landing page.png',
+                'assets/images/godlove/Screen Recording 2026-05-06 150841.mp4'
+            ]
+        },
+        'willonhair': {
+            title: 'WillOnHair',
+            description: 'A comprehensive Salon ERP built for a client in Belgium using Odoo. It includes custom POS modules, API integrations with a mobile frontend, and an advanced loyalty tracking system.',
+            tags: ['Odoo', 'ERP', 'Python', 'POS', 'API'],
+            media: [
+                'assets/images/willonhair/1.jpg',
+                'assets/images/willonhair/2.jpg',
+                'assets/images/willonhair/3.jpg',
+                'assets/images/willonhair/4.jpg',
+                'assets/images/willonhair/5.jpg',
+                'assets/images/willonhair/6.jpg',
+                'assets/images/willonhair/7.jpg',
+                'assets/images/willonhair/8.jpg',
+                'assets/images/willonhair/9.jpg',
+                'assets/images/willonhair/10.jpg',
+                'assets/images/willonhair/11.jpg',
+                'assets/images/willonhair/12.jpg',
+                'assets/images/willonhair/13.jpg',
+                'assets/images/willonhair/13a.jpg',
+                'assets/images/willonhair/14.jpg',
+                'assets/images/willonhair/15.jpg',
+                'assets/images/willonhair/16.jpg',
+                'assets/images/willonhair/17.jpg',
+                'assets/images/willonhair/18.jpg'
+            ]
+        },
+        'study-ai': {
+            title: 'Study AI',
+            description: 'An AI-powered learning platform built with FastAPI and PostgreSQL. It features APIs for processing PDFs, images, and videos (OCR, FFmpeg), AI for summaries and quizzes, and a RAG-based chatbot for document understanding.',
+            tags: ['Python', 'FastAPI', 'PostgreSQL', 'AI/RAG', 'OCR'],
+            media: [
+                'assets/images/study-ai/1.png',
+                'assets/images/study-ai/2.png',
+                'assets/images/study-ai/3.png',
+                'assets/images/study-ai/4.png',
+                'assets/images/study-ai/5.png',
+                'assets/images/study-ai/6.png',
+                'assets/images/study-ai/7.png',
+                'assets/images/study-ai/8.png',
+                'assets/images/study-ai/9.png',
+                'assets/images/study-ai/9b.png',
+                'assets/images/study-ai/10.png',
+                'assets/images/study-ai/11.png',
+                'assets/images/study-ai/12.png'
+            ]
+        },
+        'hubkilo': {
+            title: 'HubKilo',
+            description: 'Logistics and parcel delivery management system. Developed automated actions, route tracking, and comprehensive reporting modules using Odoo ERP.',
+            tags: ['Logistics', 'Odoo', 'Automation'],
+            media: [
+                'assets/images/hubkilo/1.png',
+                'assets/images/hubkilo/1.jpg',
+                'assets/images/hubkilo/1b.jpg',
+                'assets/images/hubkilo/2.jpg',
+                'assets/images/hubkilo/1.mp4',
+                'assets/images/hubkilo/2.mp4',
+                'assets/images/hubkilo/3.mp4',
+                'assets/images/hubkilo/4.mp4',
+                'assets/images/hubkilo/5.mp4',
+                'assets/images/hubkilo/1 best.mp4'
+            ]
+        },
+        'dga': {
+            title: 'DGA Express',
+            description: 'Travel and package management portal. Integrated booking systems, marketplace functionalities, and customer communication tools.',
+            tags: ['Booking System', 'Marketplace', 'Web App'],
+            media: [
+                'assets/images/dga/1.png',
+                'assets/images/dga/2.png',
+                'assets/images/dga/4.png',
+                'assets/images/dga/5.png',
+                'assets/images/dga/6.png',
+                'assets/images/dga/8.png',
+                'assets/images/dga/9.png',
+                'assets/images/dga/10.png',
+                'assets/images/dga/11.png'
+            ]
+        },
+        'rpn': {
+            title: 'RPN',
+            description: 'User interface design project with modern aesthetics and clean visual hierarchy for a mobile application, featuring highly intuitive user flows.',
+            tags: ['UI/UX', 'Design', 'Prototype', 'Mobile'],
+            media: [
+                'assets/images/rpn/1.jpg',
+                'assets/images/rpn/2.jpg',
+                'assets/images/rpn/3.jpg',
+                'assets/images/rpn/RPN Mobile Application.mp4'
+            ]
+        },
+        'amelia': {
+            title: 'Amelia',
+            description: 'Mobile application focused on providing a clean design, intuitive user interactions, and robust backend integrations for seamless user flows.',
+            tags: ['Mobile', 'UI/UX', 'App Design'],
+            media: [
+                'assets/images/amelia/1.jpg',
+                'assets/images/amelia/2.jpg',
+                'assets/images/amelia/3.jpg',
+                'assets/images/amelia/4.jpg',
+                'assets/images/amelia/5.jpg',
+                'assets/images/amelia/6.jpg',
+                'assets/images/amelia/7.jpg',
+                'assets/images/amelia/8.jpg',
+                'assets/images/amelia/9.jpg',
+                'assets/images/amelia/10.jpg'
             ]
         }
     };
-
-    const modal = document.getElementById('project-modal');
+const modal = document.getElementById('project-modal');
     const modalClose = document.getElementById('modal-close');
     const modalTitle = document.getElementById('modal-title');
     const modalDesc = document.getElementById('modal-desc');
@@ -172,16 +252,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     modalTags.appendChild(tagEl);
                 });
                 modalGallery.innerHTML = '';
-                project.images.forEach(imgSrc => {
-                    const img = document.createElement('img');
-                    img.src = imgSrc;
-                    img.alt = project.title;
-                    img.loading = 'lazy';
-                    img.addEventListener('error', function () {
-                        this.style.display = 'none';
+                
+                const images = project.media.filter(src => !src.endsWith('.mp4'));
+                const videos = project.media.filter(src => src.endsWith('.mp4'));
+
+                if (images.length > 0) {
+                    const imagesRow = document.createElement('div');
+                    imagesRow.className = 'media-row';
+                    images.forEach((src, index) => {
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.className = 'media-item';
+                        img.alt = project.title;
+                        img.loading = 'lazy';
+                        img.addEventListener('click', () => openLightbox(index, images, 'image'));
+                        imagesRow.appendChild(img);
                     });
-                    modalGallery.appendChild(img);
-                });
+                    modalGallery.appendChild(imagesRow);
+                }
+
+                if (videos.length > 0) {
+                    const videosRow = document.createElement('div');
+                    videosRow.className = 'media-row';
+                    videos.forEach((src, index) => {
+                        const video = document.createElement('video');
+                        video.src = src;
+                        video.className = 'media-item';
+                        video.muted = true;
+                        video.loop = true;
+                        video.autoplay = true;
+            video.muted = true;
+                        video.addEventListener('click', () => openLightbox(index, videos, 'video'));
+                        videosRow.appendChild(video);
+                    });
+                    modalGallery.appendChild(videosRow);
+                }
+                
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
@@ -204,22 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const btn = this.querySelector('.submit-btn');
-        const original = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-            setTimeout(() => {
-                btn.innerHTML = original;
-                btn.disabled = false;
-            }, 2000);
-        }, 1500);
-        this.reset();
-    });
+
 
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.querySelector('.nav-links');
@@ -477,4 +568,85 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(typeEffect, 1000);
         }
     }
+
+    // Lightbox Logic
+    let currentLightboxIndex = 0;
+    let currentLightboxArray = [];
+    let currentLightboxType = 'image';
+
+    let lightbox = document.getElementById('lightbox');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-content-container"></div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
+                lightbox.classList.remove('active');
+                lightbox.querySelector('.lightbox-content-container').innerHTML = '';
+            }
+        });
+
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentLightboxIndex > 0) {
+                openLightbox(currentLightboxIndex - 1, currentLightboxArray, currentLightboxType);
+            }
+        });
+
+        lightbox.querySelector('.lightbox-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentLightboxIndex < currentLightboxArray.length - 1) {
+                openLightbox(currentLightboxIndex + 1, currentLightboxArray, currentLightboxType);
+            }
+        });
+    }
+
+    window.openLightbox = function(index, mediaArray, type) {
+        currentLightboxIndex = index;
+        currentLightboxArray = mediaArray;
+        currentLightboxType = type;
+
+        const src = mediaArray[index];
+        const container = lightbox.querySelector('.lightbox-content-container');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+
+        container.innerHTML = '';
+
+        if (index === 0) {
+            prevBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
+        }
+
+        if (index === mediaArray.length - 1) {
+            nextBtn.style.display = 'none';
+        } else {
+            nextBtn.style.display = 'flex';
+        }
+
+        if (type === 'image') {
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'lightbox-media';
+            container.appendChild(img);
+        } else if (type === 'video') {
+            const video = document.createElement('video');
+            video.src = src;
+            video.controls = true;
+            video.autoplay = true;
+            video.muted = true;
+            video.className = 'lightbox-media';
+            container.appendChild(video);
+        }
+        lightbox.classList.add('active');
+    };
 });
