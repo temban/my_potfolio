@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectsData = {
         'tameri': {
             title: 'Tameri Network',
-            description: 'Tameri Network is a comprehensive, full-stack social platform built to seamlessly connect donors and visitors with orphanages. Designed with a scalable microservices architecture, the application facilitates community engagement through a robust social feed, secure real-time messaging, and a transparent donation system.',
+            description: '<p>A comprehensive, full-stack social platform built to seamlessly connect donors and visitors with orphanages.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Social & Community:</strong> Full-featured feed with posts, comments, likes, and multimedia.</li><li><strong>Real-Time Messaging:</strong> Instant peer-to-peer chat with typing indicators and persistence.</li><li><strong>Donation & Wallet System:</strong> Integrated digital wallet for purchasing "Stars" and sending physical gifts, powered by Stripe and Orange Money.</li><li><strong>Geolocation & Search:</strong> Map-based search for discovering nearby orphanages based on published needs.</li></ul><p><strong>Architecture:</strong> A highly decoupled, event-driven microservices ecosystem using Docker. Features a Clean Architecture on the Flutter frontend, with FastAPI, Spring Boot (Eureka), Kafka, and PostgreSQL powering the backend.</p>',
             tags: ['Flutter', 'FastAPI', 'Java (Eureka)', 'PostgreSQL', 'Kafka', 'WebSockets', 'MinIO'],
             media: [
                 'assets/images/tameri-network/1.jpg',
@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         'nationwork': {
             title: 'Nation Work',
-            description: 'Nation Work is a comprehensive, full-stack freelance and gig marketplace platform designed to seamlessly connect clients with skilled service providers. It manages the entire lifecycle of freelance engagements—from job posting and bidding to real-time communication, scheduling, and secure payments.',
-            tags: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'WebSockets', 'JWT', 'MinIO'],
+            description: '<p>A full-stack freelance and gig marketplace platform designed to seamlessly connect clients with skilled service providers.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Job Posting & Bidding:</strong> Clients post requests while freelancers submit tailored proposals and cover letters.</li><li><strong>Real-Time Chat & Scheduling:</strong> Instant negotiations via WebSockets and built-in calendar milestones.</li><li><strong>KYC & Trust System:</strong> Robust identity verification for a trusted marketplace environment.</li><li><strong>Dashboard & Analytics:</strong> Comprehensive overviews for active jobs, earnings, and ratings.</li></ul><p><strong>Architecture:</strong> Built for extreme concurrency and speed using React.js on the frontend and FastAPI on an ASGI server. Powered by PostgreSQL, Alembic, JWT auth, and MinIO for S3-compatible secure file storage.</p>',
+            tags: ['React.js', 'FastAPI', 'PostgreSQL', 'WebSockets', 'MinIO', 'JWT'],
             media: [
                 'assets/images/nationwork/1.png',
                 'assets/images/nationwork/2.png',
@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'ivissas': {
-            title: 'Ivissas',
-            description: 'A modern web platform for Ivissas, featuring a clean user interface, secure authentication, and a seamless user experience across devices. It allows users to manage services effortlessly.',
-            tags: ['Web Platform', 'UI/UX', 'Responsive'],
+            title: 'Ivisas Affaires',
+            description: '<p>A streamlined, responsive web application designed to simplify and digitize the visa application process.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Digital Visa Applications:</strong> Users can intuitively apply for business and travel visas directly through the platform.</li><li><strong>Form Validation:</strong> Integrated real-time client-side validation to ensure accurate data submission before processing.</li><li><strong>Responsive UI:</strong> A clean, modern interface styled for seamless usability across all devices.</li></ul><p><strong>Architecture:</strong> A robust Single Page Application (SPA) built entirely on the Vue.js ecosystem.</p><br><a href="https://github.com/temban/Ivisas" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Project on GitHub</a>',
+            tags: ['Vue.js', 'JavaScript', 'BootstrapVue', 'Sass'],
             media: [
                 'assets/images/ivissas/1.jpg',
                 'assets/images/ivissas/2.jpg',
@@ -109,18 +109,18 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'godlove': {
-            title: 'GodLove',
-            description: 'Landing page and web design project showcasing brand identity and modern web aesthetics. Features a clean layout, strong typography, and smooth scrolling experiences.',
-            tags: ['Web Design', 'Landing Page', 'Branding'],
+            title: 'Godlove Enterprise',
+            description: '<p>A dynamic, full-stack business application tailored for enterprise resource and customer management.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Centralized Dashboard:</strong> Provides comprehensive overviews of business operations, sales, and client interactions.</li><li><strong>Client Management:</strong> Advanced CRM capabilities allowing for streamlined tracking and engagement.</li><li><strong>Responsive Interface:</strong> A smooth and modern user interface that adapts perfectly across all devices.</li></ul><p><strong>Architecture:</strong> Engineered with a modern React.js frontend ensuring rapid, component-based UI rendering, backed by a robust and scalable database architecture.</p>',
+            tags: ['React.js', 'Node.js', 'PostgreSQL', 'Full-Stack'],
             media: [
                 'assets/images/godlove/landing page.png',
                 'assets/images/godlove/Screen Recording 2026-05-06 150841.mp4'
             ]
         },
         'willonhair': {
-            title: 'WillOnHair',
-            description: 'A comprehensive Salon ERP built for a client in Belgium using Odoo. It includes custom POS modules, API integrations with a mobile frontend, and an advanced loyalty tracking system.',
-            tags: ['Odoo', 'ERP', 'Python', 'POS', 'API'],
+            title: 'WillOnHair POS',
+            description: '<p>An integrated Point of Sale (POS) and business management system specifically designed for modern hair salons and beauty professionals.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Advanced POS Interface:</strong> Custom Point of Sale system streamlining orders, payments, discounts, and tips.</li><li><strong>Client & Appointment Management:</strong> Comprehensive client profiles (KYC) paired with robust scheduling tools.</li><li><strong>Omnichannel Access:</strong> Seamless integration between the in-store web system and the mobile client application.</li></ul><p><strong>Architecture:</strong> The backend operations and web portal are heavily driven by Odoo ERP and Odoo Website builder, completely integrated with a dedicated Flutter mobile application for cross-platform accessibility.</p>',
+            tags: ['Odoo', 'Odoo Website', 'Flutter', 'ERP', 'POS'],
             media: [
                 'assets/images/willonhair/1.jpg',
                 'assets/images/willonhair/2.jpg',
@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         'study-ai': {
             title: 'Study AI',
-            description: 'An AI-powered learning platform built with FastAPI and PostgreSQL. It features APIs for processing PDFs, images, and videos (OCR, FFmpeg), AI for summaries and quizzes, and a RAG-based chatbot for document understanding.',
-            tags: ['Python', 'FastAPI', 'PostgreSQL', 'AI/RAG', 'OCR'],
+            description: '<p>An intelligent, full-stack learning platform designed to transform how students and educators interact with pedagogical content using AI.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Multi-Format Document Processing:</strong> Advanced pipeline for importing and extracting text from PDFs, images, and lecture videos.</li><li><strong>AI-Powered Course Generation:</strong> Automatically processes text using LLMs to organize raw content into structured courses and summaries.</li><li><strong>Vector-Based Semantic Search:</strong> Retrieves context-aware answers directly sourced from your uploaded documents using RAG.</li><li><strong>Interactive Revision Quizzes:</strong> Generates tailored multiple-choice and open questions across customizable difficulty levels.</li><li><strong>Real-Time Collaborative Chat:</strong> WebSocket-powered group study rooms and peer-to-peer messaging.</li></ul><p><strong>Architecture:</strong> A Flutter mobile application powered by a high-performance FastAPI backend. Leverages PostgreSQL, SQLAlchemy, OpenAI Whisper, Gemini LLMs, and Sentence-Transformers for AI embeddings.</p>',
+            tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'AI/LLMs', 'WebSockets', 'Python'],
             media: [
                 'assets/images/study-ai/1.png',
                 'assets/images/study-ai/2.png',
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         'hubkilo': {
             title: 'HubKilo',
-            description: 'Logistics and parcel delivery management system. Developed automated actions, route tracking, and comprehensive reporting modules using Odoo ERP.',
-            tags: ['Logistics', 'Odoo', 'Automation'],
+            description: '<p>An advanced logistics and peer-to-peer parcel delivery network (similar to an Uber for packages), connecting senders with independent transporters.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Expedition Creation:</strong> Users define parcel dimensions, weight, precise GPS locations, and value, with dynamic pricing.</li><li><strong>Real-Time Tracking:</strong> Live package monitoring with stage-by-stage push notifications and GPS guidance.</li><li><strong>QR-Code Validation:</strong> Secure, code-based delivery validation between clients and transporters.</li><li><strong>Flexible Delivery:</strong> Support for air and road transport (Vans, Trucks, Flights) with integrated pickup points.</li></ul><p><strong>Architecture:</strong> A comprehensive mobile (iOS/Android) and web ecosystem featuring complex automated actions and routing.</p>',
+            tags: ['Logistics', 'Odoo', 'Tracking', 'Mobile App', 'Web App'],
             media: [
                 'assets/images/hubkilo/1.png',
                 'assets/images/hubkilo/1.jpg',
@@ -182,8 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         'dga': {
             title: 'DGA Express',
-            description: 'Travel and package management portal. Integrated booking systems, marketplace functionalities, and customer communication tools.',
-            tags: ['Booking System', 'Marketplace', 'Web App'],
+            description: '<p>A high-performance travel and package management portal integrating advanced booking systems and marketplace functionalities.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Booking Systems:</strong> Streamlined management for travel and express package delivery.</li><li><strong>Customer Portal:</strong> Dedicated interfaces for client communication and tracking.</li></ul><p><strong>Architecture:</strong> Engineered with a robust Java Spring Boot backend paired with a PostgreSQL database, ensuring scalable and reliable data transactions.</p><br><a href="https://dga-express.com/" target="_blank" style="color: var(--accent-primary); text-decoration: none; font-weight: bold;"><i class="fas fa-external-link-alt"></i> Visit DGA Express Live</a><br><a href="https://github.com/temban/DGA_EXPRESS" target="_blank" style="color: var(--text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;"><i class="fab fa-github"></i> View Frontend on GitHub</a>',
+            tags: ['Spring Boot', 'PostgreSQL', 'Web Portal', 'Java'],
             media: [
                 'assets/images/dga/1.png',
                 'assets/images/dga/2.png',
@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         'rpn': {
             title: 'RPN',
-            description: 'User interface design project with modern aesthetics and clean visual hierarchy for a mobile application, featuring highly intuitive user flows.',
-            tags: ['UI/UX', 'Design', 'Prototype', 'Mobile'],
+            description: '<p>A dedicated community and contribution management platform built for Cameroonians in Canada.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Member Management:</strong> Seamless onboarding and profile management for community members.</li><li><strong>Contribution Tracking:</strong> Automated tracking of community contributions for repatriation efforts.</li><li><strong>Dynamic Balance System:</strong> Intelligent incrementing balances that enforce negative-balance deactivation and strict reactivation protocols.</li></ul><p><strong>Architecture:</strong> Developed leveraging the powerful Odoo 15 ERP framework on the backend, complemented by a performant Flutter mobile application and a PostgreSQL database.</p>',
+            tags: ['Odoo 15', 'Flutter', 'PostgreSQL', 'ERP', 'Mobile App'],
             media: [
                 'assets/images/rpn/1.jpg',
                 'assets/images/rpn/2.jpg',
@@ -208,9 +208,9 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'amelia': {
-            title: 'Amelia',
-            description: 'Mobile application focused on providing a clean design, intuitive user interactions, and robust backend integrations for seamless user flows.',
-            tags: ['Mobile', 'UI/UX', 'App Design'],
+            title: 'Amelia Plugin Data Sync',
+            description: '<p>A custom WordPress plugin engineered to ensure robust, bidirectional database synchronization.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Bidirectional DB Sync:</strong> Seamlessly synchronizes data in real-time across database environments.</li><li><strong>WordPress Integration:</strong> Deeply integrated into the WP architecture for seamless execution and data handling without performance bottlenecks.</li></ul><br><a href="https://github.com/temban/My_Amelia_plugin_data_sync" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Plugin on GitHub</a>',
+            tags: ['WordPress', 'Plugin', 'PHP', 'Database Sync'],
             media: [
                 'assets/images/amelia/1.jpg',
                 'assets/images/amelia/2.jpg',
@@ -238,61 +238,97 @@ const modal = document.getElementById('project-modal');
         });
     });
 
+    let allProjectIds = [];
     document.querySelectorAll('.portfolio-item').forEach(item => {
+        allProjectIds.push(item.getAttribute('data-project'));
         item.addEventListener('click', function () {
-            const projectId = this.getAttribute('data-project');
-            const project = projectsData[projectId];
-            if (project) {
-                modalTitle.textContent = project.title;
-                modalDesc.textContent = project.description;
-                modalTags.innerHTML = '';
-                project.tags.forEach(tag => {
-                    const tagEl = document.createElement('span');
-                    tagEl.textContent = tag;
-                    modalTags.appendChild(tagEl);
-                });
-                modalGallery.innerHTML = '';
-                
-                const images = project.media.filter(src => !src.endsWith('.mp4'));
-                const videos = project.media.filter(src => src.endsWith('.mp4'));
-
-                if (images.length > 0) {
-                    const imagesRow = document.createElement('div');
-                    imagesRow.className = 'media-row';
-                    images.forEach((src, index) => {
-                        const img = document.createElement('img');
-                        img.src = src;
-                        img.className = 'media-item';
-                        img.alt = project.title;
-                        img.loading = 'lazy';
-                        img.addEventListener('click', () => openLightbox(index, images, 'image'));
-                        imagesRow.appendChild(img);
-                    });
-                    modalGallery.appendChild(imagesRow);
-                }
-
-                if (videos.length > 0) {
-                    const videosRow = document.createElement('div');
-                    videosRow.className = 'media-row';
-                    videos.forEach((src, index) => {
-                        const video = document.createElement('video');
-                        video.src = src;
-                        video.className = 'media-item';
-                        video.muted = true;
-                        video.loop = true;
-                        video.autoplay = true;
-            video.muted = true;
-                        video.addEventListener('click', () => openLightbox(index, videos, 'video'));
-                        videosRow.appendChild(video);
-                    });
-                    modalGallery.appendChild(videosRow);
-                }
-                
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+            openProjectModal(this.getAttribute('data-project'));
         });
     });
+
+    const prevProjectBtn = document.getElementById('prev-project-btn');
+    const nextProjectBtn = document.getElementById('next-project-btn');
+
+    function openProjectModal(projectId) {
+        const project = projectsData[projectId];
+        if (!project) return;
+        
+        const currentIndex = allProjectIds.indexOf(projectId);
+        
+        // Update nav buttons
+        if (prevProjectBtn) {
+            if (currentIndex > 0) {
+                prevProjectBtn.disabled = false;
+                prevProjectBtn.onclick = (e) => { e.stopPropagation(); openProjectModal(allProjectIds[currentIndex - 1]); };
+            } else {
+                prevProjectBtn.disabled = true;
+                prevProjectBtn.onclick = null;
+            }
+        }
+        
+        if (nextProjectBtn) {
+            if (currentIndex < allProjectIds.length - 1) {
+                nextProjectBtn.disabled = false;
+                nextProjectBtn.onclick = (e) => { e.stopPropagation(); openProjectModal(allProjectIds[currentIndex + 1]); };
+            } else {
+                nextProjectBtn.disabled = true;
+                nextProjectBtn.onclick = null;
+            }
+        }
+
+        modalTitle.textContent = project.title;
+        modalDesc.innerHTML = project.description;
+        modalTags.innerHTML = '';
+        project.tags.forEach(tag => {
+            const tagEl = document.createElement('span');
+            tagEl.textContent = tag;
+            modalTags.appendChild(tagEl);
+        });
+        modalGallery.innerHTML = '';
+        
+        const images = project.media.filter(src => !src.endsWith('.mp4'));
+        const videos = project.media.filter(src => src.endsWith('.mp4'));
+
+        if (images.length > 0) {
+            const imagesRow = document.createElement('div');
+            imagesRow.className = 'media-row';
+            images.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'media-item';
+                img.alt = project.title;
+                img.loading = 'lazy';
+                img.addEventListener('click', () => openLightbox(index, images, 'image'));
+                imagesRow.appendChild(img);
+            });
+            modalGallery.appendChild(imagesRow);
+        }
+
+        if (videos.length > 0) {
+            const videosRow = document.createElement('div');
+            videosRow.className = 'media-row';
+            videos.forEach((src, index) => {
+                const video = document.createElement('video');
+                video.src = src;
+                video.className = 'media-item';
+                video.muted = true;
+                video.loop = true;
+                video.autoplay = true;
+                video.addEventListener('click', () => openLightbox(index, videos, 'video'));
+                videosRow.appendChild(video);
+            });
+            modalGallery.appendChild(videosRow);
+        }
+        
+        // Make sure the modal content scrolls back to top when switching projects
+        const modalContentWrapper = document.querySelector('.modal-container');
+        if (modalContentWrapper) {
+            modalContentWrapper.scrollTop = 0;
+        }
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 
     function closeModal() {
         modal.classList.remove('active');

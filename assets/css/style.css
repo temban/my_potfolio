@@ -1782,3 +1782,57 @@ body {
         right: 10px;
     }
 }
+
+.modal-description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+}
+.modal-description li {
+    margin-bottom: 0.5rem;
+}
+.modal-description p {
+    margin-bottom: 1rem;
+}
+
+
+
+.modal-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2001;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+.modal-nav-arrow:hover:not(:disabled) {
+    background: var(--accent-primary);
+    transform: translateY(-50%) scale(1.1);
+}
+.modal-nav-arrow:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+.prev-arrow {
+    left: 40px;
+}
+.next-arrow {
+    right: 40px;
+}
+
+@media (max-width: 1024px) {
+    .modal-nav-arrow {
+        display: none;
+    }
+}
