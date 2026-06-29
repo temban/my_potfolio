@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
             description: '<p>An advanced logistics and peer-to-peer parcel delivery network (similar to an Uber for packages), connecting senders with independent transporters.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Expedition Creation:</strong> Users define parcel dimensions, weight, precise GPS locations, and value, with dynamic pricing.</li><li><strong>Real-Time Tracking:</strong> Live package monitoring with stage-by-stage push notifications and GPS guidance.</li><li><strong>QR-Code Validation:</strong> Secure, code-based delivery validation between clients and transporters.</li><li><strong>Flexible Delivery:</strong> Support for air and road transport (Vans, Trucks, Flights) with integrated pickup points.</li></ul><p><strong>Architecture:</strong> A comprehensive mobile (iOS/Android) and web ecosystem featuring complex automated actions and routing.</p>',
             tags: ['Logistics', 'Odoo', 'Tracking', 'Mobile App', 'Web App'],
             media: [
-                'assets/images/hubkilo/1.png',
+                'assets/images/hubkilo/1a.png',
                 'assets/images/hubkilo/1.jpg',
                 'assets/images/hubkilo/1b.jpg',
                 'assets/images/hubkilo/2.jpg',

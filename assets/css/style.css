@@ -1833,6 +1833,41 @@ body {
 
 @media (max-width: 1024px) {
     .modal-nav-arrow {
-        display: none;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+    .prev-arrow {
+        left: 15px;
+    }
+    .next-arrow {
+        right: 15px;
     }
 }
+
+@media (max-width: 768px) {
+    .modal-nav-arrow {
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        background: var(--accent-primary);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .modal-nav-arrow:hover:not(:disabled) {
+        transform: scale(1.1);
+    }
+    .prev-arrow {
+        left: 20px;
+    }
+    .next-arrow {
+        right: 20px;
+    }
+    .modal {
+        padding: 1rem;
+    }
+    .modal-container {
+        max-height: 85vh;
+        margin-bottom: 60px; /* Space for the arrows at the bottom */
+    }
+}
+
