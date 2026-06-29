@@ -40,10 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', setActiveLink);
 
     
-    const projectsData = {
+        const projectsData = {
         'tameri': {
-            title: 'Tameri Network',
-            description: '<p>A comprehensive, full-stack social platform built to seamlessly connect donors and visitors with orphanages.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Social & Community:</strong> Full-featured feed with posts, comments, likes, and multimedia.</li><li><strong>Real-Time Messaging:</strong> Instant peer-to-peer chat with typing indicators and persistence.</li><li><strong>Donation & Wallet System:</strong> Integrated digital wallet for purchasing "Stars" and sending physical gifts, powered by Stripe and Orange Money.</li><li><strong>Geolocation & Search:</strong> Map-based search for discovering nearby orphanages based on published needs.</li></ul><p><strong>Architecture:</strong> A highly decoupled, event-driven microservices ecosystem using Docker. Features a Clean Architecture on the Flutter frontend, with FastAPI, Spring Boot (Eureka), Kafka, and PostgreSQL powering the backend.</p>',
+            title: {
+                en: 'Tameri Network',
+                fr: 'Réseau Tameri'
+            },
+            description: {
+                en: '<p>A comprehensive, full-stack social platform built to seamlessly connect donors and visitors with orphanages.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Social & Community:</strong> Full-featured feed with posts, comments, likes, and multimedia.</li><li><strong>Real-Time Messaging:</strong> Instant peer-to-peer chat with typing indicators and persistence.</li><li><strong>Donation & Wallet System:</strong> Integrated digital wallet for purchasing "Stars" and sending physical gifts, powered by Stripe and Orange Money.</li><li><strong>Geolocation & Search:</strong> Map-based search for discovering nearby orphanages based on published needs.</li></ul><p><strong>Architecture:</strong> A highly decoupled, event-driven microservices ecosystem using Docker. Features a Clean Architecture on the Flutter frontend, with FastAPI, Spring Boot (Eureka), Kafka, and PostgreSQL powering the backend.</p>',
+                fr: '<p>Une plateforme sociale complète et full-stack conçue pour connecter en toute transparence les donateurs et les visiteurs aux orphelinats.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Social et Communauté:</strong> Flux complet avec publications, commentaires, likes et multimédia.</li><li><strong>Messagerie en Temps Réel:</strong> Chat instantané peer-to-peer avec indicateurs de saisie et persistance.</li><li><strong>Système de Don et Portefeuille:</strong> Portefeuille numérique intégré pour acheter des "Étoiles" et envoyer des cadeaux physiques, optimisé par Stripe et Orange Money.</li><li><strong>Géolocalisation et Recherche:</strong> Recherche basée sur une carte pour découvrir les orphelinats à proximité en fonction des besoins publiés.</li></ul><p><strong>Architecture:</strong> Un écosystème de microservices hautement découplé et piloté par les événements utilisant Docker. Dispose d\'une architecture propre sur le frontend Flutter, avec FastAPI, Spring Boot (Eureka), Kafka et PostgreSQL pour le backend.</p>'
+            },
             tags: ['Flutter', 'FastAPI', 'Java (Eureka)', 'PostgreSQL', 'Kafka', 'WebSockets', 'MinIO'],
             media: [
                 'assets/images/tameri-network/1.jpg',
@@ -70,8 +76,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'nationwork': {
-            title: 'Nation Work',
-            description: '<p>A full-stack freelance and gig marketplace platform designed to seamlessly connect clients with skilled service providers.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Job Posting & Bidding:</strong> Clients post requests while freelancers submit tailored proposals and cover letters.</li><li><strong>Real-Time Chat & Scheduling:</strong> Instant negotiations via WebSockets and built-in calendar milestones.</li><li><strong>KYC & Trust System:</strong> Robust identity verification for a trusted marketplace environment.</li><li><strong>Dashboard & Analytics:</strong> Comprehensive overviews for active jobs, earnings, and ratings.</li></ul><p><strong>Architecture:</strong> Built for extreme concurrency and speed using React.js on the frontend and FastAPI on an ASGI server. Powered by PostgreSQL, Alembic, JWT auth, and MinIO for S3-compatible secure file storage.</p>',
+            title: {
+                en: 'Nation Work',
+                fr: 'Nation Work'
+            },
+            description: {
+                en: '<p>A full-stack freelance and gig marketplace platform designed to seamlessly connect clients with skilled service providers.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Job Posting & Bidding:</strong> Clients post requests while freelancers submit tailored proposals and cover letters.</li><li><strong>Real-Time Chat & Scheduling:</strong> Instant negotiations via WebSockets and built-in calendar milestones.</li><li><strong>KYC & Trust System:</strong> Robust identity verification for a trusted marketplace environment.</li><li><strong>Dashboard & Analytics:</strong> Comprehensive overviews for active jobs, earnings, and ratings.</li></ul><p><strong>Architecture:</strong> Built for extreme concurrency and speed using React.js on the frontend and FastAPI on an ASGI server. Powered by PostgreSQL, Alembic, JWT auth, and MinIO for S3-compatible secure file storage.</p>',
+                fr: '<p>Une plateforme de marché de freelances et de missions full-stack conçue pour connecter en toute transparence les clients aux prestataires de services qualifiés.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Publication d\'Offres & Enchères:</strong> Les clients publient des demandes tandis que les freelances soumettent des propositions sur mesure et des lettres de motivation.</li><li><strong>Chat en Temps Réel & Planification:</strong> Négociations instantanées via WebSockets et jalons de calendrier intégrés.</li><li><strong>Système KYC & Confiance:</strong> Vérification d\'identité robuste pour un environnement de marché de confiance.</li><li><strong>Tableau de Bord & Analytique:</strong> Aperçus complets des emplois actifs, des gains et des évaluations.</li></ul><p><strong>Architecture:</strong> Conçu pour une concurrence extrême et une rapidité utilisant React.js sur le frontend et FastAPI sur un serveur ASGI. Propulsé par PostgreSQL, Alembic, l\'authentification JWT et MinIO pour un stockage de fichiers sécurisé compatible S3.</p>'
+            },
             tags: ['React.js', 'FastAPI', 'PostgreSQL', 'WebSockets', 'MinIO', 'JWT'],
             media: [
                 'assets/images/nationwork/1.png',
@@ -93,8 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'ivissas': {
-            title: 'Ivisas Affaires',
-            description: '<p>A streamlined, responsive web application designed to simplify and digitize the visa application process.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Digital Visa Applications:</strong> Users can intuitively apply for business and travel visas directly through the platform.</li><li><strong>Form Validation:</strong> Integrated real-time client-side validation to ensure accurate data submission before processing.</li><li><strong>Responsive UI:</strong> A clean, modern interface styled for seamless usability across all devices.</li></ul><p><strong>Architecture:</strong> A robust Single Page Application (SPA) built entirely on the Vue.js ecosystem.</p><br><a href="https://github.com/temban/Ivisas" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Project on GitHub</a>',
+            title: {
+                en: 'Ivisas Affaires',
+                fr: 'Ivisas Affaires'
+            },
+            description: {
+                en: '<p>A streamlined, responsive web application designed to simplify and digitize the visa application process.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Digital Visa Applications:</strong> Users can intuitively apply for business and travel visas directly through the platform.</li><li><strong>Form Validation:</strong> Integrated real-time client-side validation to ensure accurate data submission before processing.</li><li><strong>Responsive UI:</strong> A clean, modern interface styled for seamless usability across all devices.</li></ul><p><strong>Architecture:</strong> A robust Single Page Application (SPA) built entirely on the Vue.js ecosystem.</p><br><a href="https://github.com/temban/Ivisas" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Project on GitHub</a>',
+                fr: '<p>Une application web simplifiée et réactive conçue pour simplifier et numériser le processus de demande de visa.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Demandes de Visa Numériques:</strong> Les utilisateurs peuvent demander intuitivement des visas d\'affaires et de voyage directement via la plateforme.</li><li><strong>Validation de Formulaire:</strong> Validation intégrée en temps réel côté client pour assurer une soumission précise des données avant le traitement.</li><li><strong>Interface Réactive:</strong> Une interface propre et moderne conçue pour une utilisation transparente sur tous les appareils.</li></ul><p><strong>Architecture:</strong> Une application monopage (SPA) robuste construite entièrement sur l\'écosystème Vue.js.</p><br><a href="https://github.com/temban/Ivisas" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> Voir le Projet sur GitHub</a>'
+            },
             tags: ['Vue.js', 'JavaScript', 'BootstrapVue', 'Sass'],
             media: [
                 'assets/images/ivissas/1.jpg',
@@ -109,8 +127,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'godlove': {
-            title: 'Godlove Enterprise',
-            description: '<p>A dynamic, full-stack business application tailored for enterprise resource and customer management.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Centralized Dashboard:</strong> Provides comprehensive overviews of business operations, sales, and client interactions.</li><li><strong>Client Management:</strong> Advanced CRM capabilities allowing for streamlined tracking and engagement.</li><li><strong>Responsive Interface:</strong> A smooth and modern user interface that adapts perfectly across all devices.</li></ul><p><strong>Architecture:</strong> Engineered with a modern React.js frontend ensuring rapid, component-based UI rendering, backed by a robust and scalable database architecture.</p>',
+            title: {
+                en: 'Godlove Enterprise',
+                fr: 'Entreprise Godlove'
+            },
+            description: {
+                en: '<p>A dynamic, full-stack business application tailored for enterprise resource and customer management.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Centralized Dashboard:</strong> Provides comprehensive overviews of business operations, sales, and client interactions.</li><li><strong>Client Management:</strong> Advanced CRM capabilities allowing for streamlined tracking and engagement.</li><li><strong>Responsive Interface:</strong> A smooth and modern user interface that adapts perfectly across all devices.</li></ul><p><strong>Architecture:</strong> Engineered with a modern React.js frontend ensuring rapid, component-based UI rendering, backed by a robust and scalable database architecture.</p>',
+                fr: '<p>Une application métier dynamique et full-stack adaptée à la gestion des ressources de l\'entreprise et de la clientèle.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Tableau de Bord Centralisé:</strong> Fournit des aperçus complets des opérations commerciales, des ventes et des interactions avec les clients.</li><li><strong>Gestion des Clients:</strong> Capacités CRM avancées permettant un suivi et un engagement rationalisés.</li><li><strong>Interface Réactive:</strong> Une interface utilisateur fluide et moderne qui s\'adapte parfaitement à tous les appareils.</li></ul><p><strong>Architecture:</strong> Conçue avec un frontend moderne React.js assurant un rendu rapide de l\'interface utilisateur basé sur des composants, soutenu par une architecture de base de données robuste et évolutive.</p>'
+            },
             tags: ['React.js', 'Node.js', 'PostgreSQL', 'Full-Stack'],
             media: [
                 'assets/images/godlove/landing page.png',
@@ -118,8 +142,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'willonhair': {
-            title: 'WillOnHair POS',
-            description: '<p>An integrated Point of Sale (POS) and business management system specifically designed for modern hair salons and beauty professionals.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Advanced POS Interface:</strong> Custom Point of Sale system streamlining orders, payments, discounts, and tips.</li><li><strong>Client & Appointment Management:</strong> Comprehensive client profiles (KYC) paired with robust scheduling tools.</li><li><strong>Omnichannel Access:</strong> Seamless integration between the in-store web system and the mobile client application.</li></ul><p><strong>Architecture:</strong> The backend operations and web portal are heavily driven by Odoo ERP and Odoo Website builder, completely integrated with a dedicated Flutter mobile application for cross-platform accessibility.</p>',
+            title: {
+                en: 'WillOnHair POS',
+                fr: 'WillOnHair POS'
+            },
+            description: {
+                en: '<p>An integrated Point of Sale (POS) and business management system specifically designed for modern hair salons and beauty professionals.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Advanced POS Interface:</strong> Custom Point of Sale system streamlining orders, payments, discounts, and tips.</li><li><strong>Client & Appointment Management:</strong> Comprehensive client profiles (KYC) paired with robust scheduling tools.</li><li><strong>Omnichannel Access:</strong> Seamless integration between the in-store web system and the mobile client application.</li></ul><p><strong>Architecture:</strong> The backend operations and web portal are heavily driven by Odoo ERP and Odoo Website builder, completely integrated with a dedicated Flutter mobile application for cross-platform accessibility.</p>',
+                fr: '<p>Un système de point de vente (POS) intégré et de gestion d\'entreprise conçu spécifiquement pour les salons de coiffure modernes et les professionnels de la beauté.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Interface POS Avancée:</strong> Système de point de vente personnalisé rationalisant les commandes, les paiements, les remises et les pourboires.</li><li><strong>Gestion des Clients & Rendez-vous:</strong> Profils clients complets (KYC) associés à des outils de planification robustes.</li><li><strong>Accès Omnicanal:</strong> Intégration transparente entre le système web en magasin et l\'application client mobile.</li></ul><p><strong>Architecture:</strong> Les opérations backend et le portail web sont fortement pilotés par Odoo ERP et le constructeur de sites web Odoo, complètement intégrés avec une application mobile Flutter dédiée pour une accessibilité multiplateforme.</p>'
+            },
             tags: ['Odoo', 'Odoo Website', 'Flutter', 'ERP', 'POS'],
             media: [
                 'assets/images/willonhair/1.jpg',
@@ -144,8 +174,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'study-ai': {
-            title: 'Study AI',
-            description: '<p>An intelligent, full-stack learning platform designed to transform how students and educators interact with pedagogical content using AI.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Multi-Format Document Processing:</strong> Advanced pipeline for importing and extracting text from PDFs, images, and lecture videos.</li><li><strong>AI-Powered Course Generation:</strong> Automatically processes text using LLMs to organize raw content into structured courses and summaries.</li><li><strong>Vector-Based Semantic Search:</strong> Retrieves context-aware answers directly sourced from your uploaded documents using RAG.</li><li><strong>Interactive Revision Quizzes:</strong> Generates tailored multiple-choice and open questions across customizable difficulty levels.</li><li><strong>Real-Time Collaborative Chat:</strong> WebSocket-powered group study rooms and peer-to-peer messaging.</li></ul><p><strong>Architecture:</strong> A Flutter mobile application powered by a high-performance FastAPI backend. Leverages PostgreSQL, SQLAlchemy, OpenAI Whisper, Gemini LLMs, and Sentence-Transformers for AI embeddings.</p>',
+            title: {
+                en: 'Study AI',
+                fr: 'Study AI'
+            },
+            description: {
+                en: '<p>An intelligent, full-stack learning platform designed to transform how students and educators interact with pedagogical content using AI.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Multi-Format Document Processing:</strong> Advanced pipeline for importing and extracting text from PDFs, images, and lecture videos.</li><li><strong>AI-Powered Course Generation:</strong> Automatically processes text using LLMs to organize raw content into structured courses and summaries.</li><li><strong>Vector-Based Semantic Search:</strong> Retrieves context-aware answers directly sourced from your uploaded documents using RAG.</li><li><strong>Interactive Revision Quizzes:</strong> Generates tailored multiple-choice and open questions across customizable difficulty levels.</li><li><strong>Real-Time Collaborative Chat:</strong> WebSocket-powered group study rooms and peer-to-peer messaging.</li></ul><p><strong>Architecture:</strong> A Flutter mobile application powered by a high-performance FastAPI backend. Leverages PostgreSQL, SQLAlchemy, OpenAI Whisper, Gemini LLMs, and Sentence-Transformers for AI embeddings.</p>',
+                fr: '<p>Une plateforme d\'apprentissage intelligente et full-stack conçue pour transformer la façon dont les étudiants et les éducateurs interagissent avec le contenu pédagogique à l\'aide de l\'IA.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Traitement de Documents Multi-Format:</strong> Pipeline avancé pour importer et extraire du texte à partir de PDF, d\'images et de vidéos de cours.</li><li><strong>Génération de Cours Basée sur l\'IA:</strong> Traite automatiquement le texte à l\'aide de LLM pour organiser le contenu brut en cours et résumés structurés.</li><li><strong>Recherche Sémantique Basée sur des Vecteurs:</strong> Récupère des réponses contextuelles directement à partir de vos documents téléchargés en utilisant RAG.</li><li><strong>Quiz de Révision Interactifs:</strong> Génère des questions à choix multiples et ouvertes sur mesure à travers des niveaux de difficulté personnalisables.</li><li><strong>Chat Collaboratif en Temps Réel:</strong> Salles d\'étude de groupe et messagerie peer-to-peer optimisées par WebSocket.</li></ul><p><strong>Architecture:</strong> Une application mobile Flutter propulsée par un backend FastAPI haute performance. Tire parti de PostgreSQL, SQLAlchemy, OpenAI Whisper, des LLM Gemini et des Sentence-Transformers pour les intégrations d\'IA.</p>'
+            },
             tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'AI/LLMs', 'WebSockets', 'Python'],
             media: [
                 'assets/images/study-ai/1.png',
@@ -164,8 +200,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'hubkilo': {
-            title: 'HubKilo',
-            description: '<p>An advanced logistics and peer-to-peer parcel delivery network (similar to an Uber for packages), connecting senders with independent transporters.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Expedition Creation:</strong> Users define parcel dimensions, weight, precise GPS locations, and value, with dynamic pricing.</li><li><strong>Real-Time Tracking:</strong> Live package monitoring with stage-by-stage push notifications and GPS guidance.</li><li><strong>QR-Code Validation:</strong> Secure, code-based delivery validation between clients and transporters.</li><li><strong>Flexible Delivery:</strong> Support for air and road transport (Vans, Trucks, Flights) with integrated pickup points.</li></ul><p><strong>Architecture:</strong> A comprehensive mobile (iOS/Android) and web ecosystem featuring complex automated actions and routing.</p>',
+            title: {
+                en: 'HubKilo',
+                fr: 'HubKilo'
+            },
+            description: {
+                en: '<p>An advanced logistics and peer-to-peer parcel delivery network (similar to an Uber for packages), connecting senders with independent transporters.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Expedition Creation:</strong> Users define parcel dimensions, weight, precise GPS locations, and value, with dynamic pricing.</li><li><strong>Real-Time Tracking:</strong> Live package monitoring with stage-by-stage push notifications and GPS guidance.</li><li><strong>QR-Code Validation:</strong> Secure, code-based delivery validation between clients and transporters.</li><li><strong>Flexible Delivery:</strong> Support for air and road transport (Vans, Trucks, Flights) with integrated pickup points.</li></ul><p><strong>Architecture:</strong> A comprehensive mobile (iOS/Android) and web ecosystem featuring complex automated actions and routing.</p>',
+                fr: '<p>Un réseau avancé de logistique et de livraison de colis peer-to-peer (similaire à un Uber pour les colis), connectant les expéditeurs aux transporteurs indépendants.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Création d\'Expédition:</strong> Les utilisateurs définissent les dimensions du colis, le poids, les emplacements GPS précis et la valeur, avec une tarification dynamique.</li><li><strong>Suivi en Temps Réel:</strong> Surveillance en direct des colis avec notifications push étape par étape et guidage GPS.</li><li><strong>Validation par Code QR:</strong> Validation de livraison sécurisée et basée sur un code entre les clients et les transporteurs.</li><li><strong>Livraison Flexible:</strong> Support pour le transport aérien et routier (Camionnettes, Camions, Vols) avec des points de ramassage intégrés.</li></ul><p><strong>Architecture:</strong> Un écosystème complet mobile (iOS/Android) et web proposant des actions automatisées et un routage complexes.</p>'
+            },
             tags: ['Logistics', 'Odoo', 'Tracking', 'Mobile App', 'Web App'],
             media: [
                 'assets/images/hubkilo/1a.png',
@@ -181,8 +223,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'dga': {
-            title: 'DGA Express',
-            description: '<p>A high-performance travel and package management portal integrating advanced booking systems and marketplace functionalities.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Booking Systems:</strong> Streamlined management for travel and express package delivery.</li><li><strong>Customer Portal:</strong> Dedicated interfaces for client communication and tracking.</li></ul><p><strong>Architecture:</strong> Engineered with a robust Java Spring Boot backend paired with a PostgreSQL database, ensuring scalable and reliable data transactions.</p><br><a href="https://dga-express.com/" target="_blank" style="color: var(--accent-primary); text-decoration: none; font-weight: bold;"><i class="fas fa-external-link-alt"></i> Visit DGA Express Live</a><br><a href="https://github.com/temban/DGA_EXPRESS" target="_blank" style="color: var(--text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;"><i class="fab fa-github"></i> View Frontend on GitHub</a>',
+            title: {
+                en: 'DGA Express',
+                fr: 'DGA Express'
+            },
+            description: {
+                en: '<p>A high-performance travel and package management portal integrating advanced booking systems and marketplace functionalities.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Booking Systems:</strong> Streamlined management for travel and express package delivery.</li><li><strong>Customer Portal:</strong> Dedicated interfaces for client communication and tracking.</li></ul><p><strong>Architecture:</strong> Engineered with a robust Java Spring Boot backend paired with a PostgreSQL database, ensuring scalable and reliable data transactions.</p><br><a href="https://dga-express.com/" target="_blank" style="color: var(--accent-primary); text-decoration: none; font-weight: bold;"><i class="fas fa-external-link-alt"></i> Visit DGA Express Live</a><br><a href="https://github.com/temban/DGA_EXPRESS" target="_blank" style="color: var(--text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;"><i class="fab fa-github"></i> View Frontend on GitHub</a>',
+                fr: '<p>Un portail performant de gestion des voyages et des colis intégrant des systèmes de réservation avancés et des fonctionnalités de marché.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Systèmes de Réservation:</strong> Gestion rationalisée des voyages et de la livraison express de colis.</li><li><strong>Portail Client:</strong> Interfaces dédiées à la communication avec les clients et au suivi.</li></ul><p><strong>Architecture:</strong> Conçu avec un backend Java Spring Boot robuste associé à une base de données PostgreSQL, garantissant des transactions de données évolutives et fiables.</p><br><a href="https://dga-express.com/" target="_blank" style="color: var(--accent-primary); text-decoration: none; font-weight: bold;"><i class="fas fa-external-link-alt"></i> Visiter DGA Express en Direct</a><br><a href="https://github.com/temban/DGA_EXPRESS" target="_blank" style="color: var(--text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;"><i class="fab fa-github"></i> Voir le Frontend sur GitHub</a>'
+            },
             tags: ['Spring Boot', 'PostgreSQL', 'Web Portal', 'Java'],
             media: [
                 'assets/images/dga/1.png',
@@ -197,8 +245,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'rpn': {
-            title: 'RPN',
-            description: '<p>A dedicated community and contribution management platform built for Cameroonians in Canada.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Member Management:</strong> Seamless onboarding and profile management for community members.</li><li><strong>Contribution Tracking:</strong> Automated tracking of community contributions for repatriation efforts.</li><li><strong>Dynamic Balance System:</strong> Intelligent incrementing balances that enforce negative-balance deactivation and strict reactivation protocols.</li></ul><p><strong>Architecture:</strong> Developed leveraging the powerful Odoo 15 ERP framework on the backend, complemented by a performant Flutter mobile application and a PostgreSQL database.</p>',
+            title: {
+                en: 'RPN',
+                fr: 'RPN'
+            },
+            description: {
+                en: '<p>A dedicated community and contribution management platform built for Cameroonians in Canada.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Member Management:</strong> Seamless onboarding and profile management for community members.</li><li><strong>Contribution Tracking:</strong> Automated tracking of community contributions for repatriation efforts.</li><li><strong>Dynamic Balance System:</strong> Intelligent incrementing balances that enforce negative-balance deactivation and strict reactivation protocols.</li></ul><p><strong>Architecture:</strong> Developed leveraging the powerful Odoo 15 ERP framework on the backend, complemented by a performant Flutter mobile application and a PostgreSQL database.</p>',
+                fr: '<p>Une plateforme dédiée à la gestion de la communauté et des contributions conçue pour les Camerounais au Canada.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Gestion des Membres:</strong> Intégration et gestion de profil transparentes pour les membres de la communauté.</li><li><strong>Suivi des Contributions:</strong> Suivi automatisé des contributions de la communauté aux efforts de rapatriement.</li><li><strong>Système de Solde Dynamique:</strong> Des soldes s\'incrémentant intelligemment qui imposent une désactivation en cas de solde négatif et des protocoles de réactivation stricts.</li></ul><p><strong>Architecture:</strong> Développé en tirant parti du puissant framework ERP Odoo 15 sur le backend, complété par une application mobile performante Flutter et une base de données PostgreSQL.</p>'
+            },
             tags: ['Odoo 15', 'Flutter', 'PostgreSQL', 'ERP', 'Mobile App'],
             media: [
                 'assets/images/rpn/1.jpg',
@@ -208,8 +262,14 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         'amelia': {
-            title: 'Amelia Plugin Data Sync',
-            description: '<p>A custom WordPress plugin engineered to ensure robust, bidirectional database synchronization.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Bidirectional DB Sync:</strong> Seamlessly synchronizes data in real-time across database environments.</li><li><strong>WordPress Integration:</strong> Deeply integrated into the WP architecture for seamless execution and data handling without performance bottlenecks.</li></ul><br><a href="https://github.com/temban/My_Amelia_plugin_data_sync" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Plugin on GitHub</a>',
+            title: {
+                en: 'Amelia Plugin Data Sync',
+                fr: 'Synchronisation de Données du Plugin Amelia'
+            },
+            description: {
+                en: '<p>A custom WordPress plugin engineered to ensure robust, bidirectional database synchronization.</p><p><strong>Key Features:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Bidirectional DB Sync:</strong> Seamlessly synchronizes data in real-time across database environments.</li><li><strong>WordPress Integration:</strong> Deeply integrated into the WP architecture for seamless execution and data handling without performance bottlenecks.</li></ul><br><a href="https://github.com/temban/My_Amelia_plugin_data_sync" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> View Plugin on GitHub</a>',
+                fr: '<p>Un plugin WordPress personnalisé conçu pour assurer une synchronisation robuste et bidirectionnelle de la base de données.</p><p><strong>Caractéristiques principales:</strong></p><ul style="margin-left: 20px; margin-bottom: 15px;"><li><strong>Synchronisation Bidirectionnelle DB:</strong> Synchronise de manière transparente les données en temps réel à travers des environnements de base de données.</li><li><strong>Intégration WordPress:</strong> Profondément intégré dans l\'architecture WP pour une exécution transparente et un traitement des données sans goulot d\'étranglement de performance.</li></ul><br><a href="https://github.com/temban/My_Amelia_plugin_data_sync" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;"><i class="fab fa-github"></i> Voir le Plugin sur GitHub</a>'
+            },
             tags: ['WordPress', 'Plugin', 'PHP', 'Database Sync'],
             media: [
                 'assets/images/amelia/1.jpg',
@@ -252,7 +312,7 @@ const modal = document.getElementById('project-modal');
     function openProjectModal(projectId) {
         const project = projectsData[projectId];
         if (!project) return;
-        
+        window.currentActiveProjectId = projectId;
         const currentIndex = allProjectIds.indexOf(projectId);
         
         // Update nav buttons
@@ -276,8 +336,8 @@ const modal = document.getElementById('project-modal');
             }
         }
 
-        modalTitle.textContent = project.title;
-        modalDesc.innerHTML = project.description;
+        modalTitle.textContent = typeof project.title === 'object' ? project.title[currentLang] : project.title;
+        modalDesc.innerHTML = typeof project.description === 'object' ? project.description[currentLang] : project.description;
         modalTags.innerHTML = '';
         project.tags.forEach(tag => {
             const tagEl = document.createElement('span');
@@ -573,13 +633,14 @@ const modal = document.getElementById('project-modal');
             line2.className = 'typing-line gradient-text typing-text';
             heroTitle.appendChild(line2);
 
-            const words = ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Problem Solver'];
+            window.typingWords = window.typingWords || ['Software Engineer', 'Full-Stack Developer', 'Backend Developer', 'Problem Solver'];
+            const words = window.typingWords;
             let wordIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
 
             function typeEffect() {
-                const current = words[wordIndex];
+                const current = window.typingWords[wordIndex] || window.typingWords[0];
                 if (!isDeleting) {
                     line2.textContent = current.substring(0, charIndex + 1);
                     charIndex++;
@@ -594,7 +655,7 @@ const modal = document.getElementById('project-modal');
                     charIndex--;
                     if (charIndex === 0) {
                         isDeleting = false;
-                        wordIndex = (wordIndex + 1) % words.length;
+                        wordIndex = (wordIndex + 1) % window.typingWords.length;
                         setTimeout(typeEffect, 400);
                         return;
                     }
@@ -685,4 +746,66 @@ const modal = document.getElementById('project-modal');
         }
         lightbox.classList.add('active');
     };
+    // Translation Logic
+    window.currentLang = localStorage.getItem('lang') || 'en';
+    
+    function updateLanguage(lang) {
+        window.currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang;
+        
+        
+        
+        // Update all data-i18n elements
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const keys = el.getAttribute('data-i18n').split('.');
+            let value = typeof translations !== 'undefined' ? translations[lang] : null;
+            if (value) {
+                for (const key of keys) {
+                    if (value) value = value[key];
+                }
+            }
+            if (value) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = value;
+                } else {
+                    el.innerHTML = value;
+                }
+            }
+        });
+        
+        // Update typing words in Hero if available
+        if (typeof translations !== 'undefined' && translations[lang] && translations[lang].hero && translations[lang].hero.typingWords) {
+            window.typingWords = translations[lang].hero.typingWords;
+        }
+
+        // If modal is open, re-render text
+        const modal = document.getElementById('project-modal');
+        if (modal && modal.classList.contains('active')) {
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const projectId = allProjectIds[window.currentLightboxIndex] || allProjectIds[currentLightboxIndex];
+            // Wait, we don't have current project ID saved globally except in openProjectModal.
+            // Let's just store currentProjectId globally when opening modal.
+            if (window.currentActiveProjectId) {
+                const project = projectsData[window.currentActiveProjectId];
+                if (project) {
+                    modalTitle.textContent = typeof project.title === 'object' ? project.title[lang] : project.title;
+                    modalDesc.innerHTML = typeof project.description === 'object' ? project.description[lang] : project.description;
+                }
+            }
+        }
+    }
+    
+    const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            const newLang = window.currentLang === 'en' ? 'fr' : 'en';
+            updateLanguage(newLang);
+        });
+    }
+
+    // Initial translation call
+    updateLanguage(window.currentLang);
+
 });

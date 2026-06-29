@@ -382,6 +382,85 @@ body {
 }
 
 
+/* Language Toggle */
+.lang-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.lang-track {
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.lang-toggle:hover .lang-track {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme="dark"] .lang-toggle:hover .lang-track {
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.15);
+}
+
+.lang-text {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-primary);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    user-select: none;
+    line-height: 1;
+}
+
+html[lang="en"] .flag-fr { opacity: 0.3; }
+html[lang="fr"] .flag-en { opacity: 0.3; }
+
+.lang-knob {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-accent);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-knob::after {
+    content: "🇬🇧";
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+html[lang="fr"] .lang-knob {
+    transform: translateX(30px);
+}
+
+html[lang="fr"] .lang-knob::after {
+    content: "🇫🇷";
+}
+
 .cta-btn {
     background: var(--accent-gradient);
     color: white;
@@ -1278,7 +1357,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -1678,7 +1756,9 @@ body {
         display: none;
     }
 
-    .nav-links .cta-btn {
+    .nav-links 
+
+.cta-btn {
         display: inline-flex;
         margin-top: 1rem;
     }
@@ -1794,8 +1874,6 @@ body {
 .modal-description p {
     margin-bottom: 1rem;
 }
-
-
 
 .modal-nav-arrow {
     position: absolute;
